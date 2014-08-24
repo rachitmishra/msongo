@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="Theme.AppCompat.Light.NoActionBar" parent="@style/Theme.AppCompat.Light">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	<style name="EditText.Style" parent="android:Widget.Holo.EditText">
+		<item name="android:ems">10</item>
+		<item name="android:inputType">date</item>
+		<item name="android:layout_marginBottom">4dp</item>
+		<item name="android:padding">12dp</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+</resources>

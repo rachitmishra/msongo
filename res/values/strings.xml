@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">MSDCS</string>
+	<string-array name="crop_stages">
+		<item>Vegitative</item>
+		<item>Flowering</item>
+		<item>Pod Forming</item>
+		<item>Seed Filling</item>
+		<item>Oil Accumulation</item>
+	</string-array>
+	<string name="spinner_value">Spinner Value</string>
+</resources>

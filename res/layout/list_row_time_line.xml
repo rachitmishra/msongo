@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="#fafafa"
+    tools:context="in.ceeq.msdcs.fragment.TimeLineFragment" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="42dp"
+        android:background="@color/blue" />
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="28\nOct"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_toRightOf="@+id/dateView"
+        android:background="@color/card_background"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="200"
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="102356"
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Flowering"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="200"
+                android:textAllCaps="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="102356"
+                android:textAllCaps="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

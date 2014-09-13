@@ -6,7 +6,7 @@
 	android:background="@color/card_background"
 	android:orientation="vertical"
 	android:padding="8dp"
-	tools:context="in.ceeq.msdcs.HomeActivity" >
+	tools:context="in.ceeq.msdcs.activity.HomeActivity" >
 	<TextView
 		android:id="@+id/textView1"
 		android:layout_width="wrap_content"

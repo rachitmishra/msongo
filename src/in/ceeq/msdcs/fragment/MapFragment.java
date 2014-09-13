@@ -1,4 +1,6 @@
-package in.ceeq.msdcs;
+package in.ceeq.msdcs.fragment;
+
+import in.ceeq.msdcs.R;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -28,28 +30,46 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 
-public class MapFragment extends Fragment implements OnMapClickListener, OnMarkerClickListener, View.OnClickListener, OnDateSetListener {
+public class MapFragment extends Fragment implements OnMapClickListener, OnMarkerClickListener, View.OnClickListener,
+		OnDateSetListener {
 
-	public static final int SOWING_DATE_PICKER= 1;
-	public static final int SURVEY_DATE_PICKER= 2;
+	public static final int SOWING_DATE_PICKER = 1;
+
+	public static final int SURVEY_DATE_PICKER = 2;
+
 	private GoogleMap map;
+
 	private MapView mapView;
+
 	private EditText sowingDate;
+
 	private EditText surveyDate;
+
 	private EditText diseaseName;
+
 	private EditText diseaseSeverityScore;
+
 	private EditText pestName;
+
 	private EditText pestInfestationCount;
+
 	private Spinner cropStageSpinner;
+
 	private LinearLayout appBar;
+
 	private LinearLayout formLayout;
+
 	private LinearLayout appBarToggleLayout;
+
 	private Button saveData;
+
 	private Button cancel;
+
 	private ImageButton appBarToggleOut;
+
 	private ImageButton appBarToggleIn;
+
 	private int mCurrentDatePicker;
-	
 
 	public static MapFragment getInstance() {
 		return new MapFragment();
@@ -88,14 +108,18 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		sowingDate.setOnClickListener(this);
 		surveyDate.setOnClickListener(this);
 
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.crop_stages, android.R.layout.simple_spinner_item);
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.crop_stages,
+				android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		cropStageSpinner.setAdapter(adapter);
 		cropStageSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 				parent.setTag(R.string.spinner_value, parent.getItemAtPosition(pos).toString());
 			}
 
+			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
 			}
 		});
@@ -162,45 +186,47 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	@Override
 	public void onClick(View v) {
 		Calendar c = new GregorianCalendar();
-		
-		switch (v.getId()) {
-		case R.id.cancel:
-			formLayout.setVisibility(View.GONE);
-			appBarToggleLayout.setVisibility(View.VISIBLE);
-			break;
 
-		case R.id.save:
-			formLayout.setVisibility(View.GONE);
-			appBarToggleLayout.setVisibility(View.VISIBLE);
-			break;
-		case R.id.appBarToggleIn:
-			appBar.setVisibility(View.GONE);
-			appBarToggleLayout.setVisibility(View.VISIBLE);
-			break;
-		case R.id.appBarToggleOut:
-			appBarToggleLayout.setVisibility(View.GONE);
-			appBar.setVisibility(View.VISIBLE);
-			break;
-		case R.id.sowingDate:
-			mCurrentDatePicker = SOWING_DATE_PICKER;
-			new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
-			break;
-		case R.id.surveyDate:
-			mCurrentDatePicker = SURVEY_DATE_PICKER;
-			new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
-			break;
+		switch (v.getId()) {
+			case R.id.cancel:
+				formLayout.setVisibility(View.GONE);
+				appBarToggleLayout.setVisibility(View.VISIBLE);
+				break;
+
+			case R.id.save:
+				formLayout.setVisibility(View.GONE);
+				appBarToggleLayout.setVisibility(View.VISIBLE);
+				break;
+			case R.id.appBarToggleIn:
+				appBar.setVisibility(View.GONE);
+				appBarToggleLayout.setVisibility(View.VISIBLE);
+				break;
+			case R.id.appBarToggleOut:
+				appBarToggleLayout.setVisibility(View.GONE);
+				appBar.setVisibility(View.VISIBLE);
+				break;
+			case R.id.sowingDate:
+				mCurrentDatePicker = SOWING_DATE_PICKER;
+				new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH),
+						c.get(Calendar.DAY_OF_MONTH)).show();
+				break;
+			case R.id.surveyDate:
+				mCurrentDatePicker = SURVEY_DATE_PICKER;
+				new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH),
+						c.get(Calendar.DAY_OF_MONTH)).show();
+				break;
 		}
 	}
 
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 		switch (mCurrentDatePicker) {
-		case SOWING_DATE_PICKER:
-			sowingDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-			break;
-		case SURVEY_DATE_PICKER:
-			surveyDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-			break;
+			case SOWING_DATE_PICKER:
+				sowingDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+				break;
+			case SURVEY_DATE_PICKER:
+				surveyDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+				break;
 		}
 	}
 }

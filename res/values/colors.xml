@@ -8,4 +8,6 @@
 	<color name="green">#2ecc71</color>
 	<color name="red">#e74c3c</color>
 	<color name="blue">#3498db</color>
+	<color name="timeline_background">#e5e5e5</color>
+	
 </resources>

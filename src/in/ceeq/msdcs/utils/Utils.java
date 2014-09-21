@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.TimeZone;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.location.LocationManager;
@@ -19,11 +20,22 @@ import android.net.Uri;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 
 public class Utils {
+
+	public static void hideKeyboard(Activity activity) {
+		try {
+			InputMethodManager inputManager = (InputMethodManager) activity
+					.getSystemService(Context.INPUT_METHOD_SERVICE);
+			inputManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
+					InputMethodManager.HIDE_NOT_ALWAYS);
+		} catch (Exception e) {
+		}
+	}
 
 	/**************************************
 	 ***************** User ****************
@@ -31,7 +43,7 @@ public class Utils {
 
 	public static User getCurrentUser(Context context) {
 		User user = new User();
-		user.mId = Utils.getStringPrefs(context, CURRENT_USER_ID);
+		user.mId = Utils.getLongPrefs(context, CURRENT_USER_ID);
 		user.mName = Utils.getStringPrefs(context, CURRENT_USER_NAME);
 		user.mEmail = Utils.getStringPrefs(context, CURRENT_USER_EMAIL);
 
@@ -66,11 +78,6 @@ public class Utils {
 
 	public static String getJoinColumnName(String mTableName, String mColumnName) {
 		return new StringBuilder(mTableName).append(".").append(mColumnName).toString();
-	}
-
-	public static String getColumnName(String mTableName, String mColumnName) {
-		return new StringBuilder(mTableName).append(".").append(mColumnName).append(" AS ").append(mColumnName)
-				.toString();
 	}
 
 	public static String getColumnName(String mTableName, String mColumnName, String mAliasName) {
@@ -210,6 +217,8 @@ public class Utils {
 
 	public static final String CURRENT_USER_EMAIL = "current_user_email";
 
+	public static final String IS_LOGGED_IN = "is_logged_in";
+
 	public static Boolean getBooleanPrefs(Context ctx, String key) {
 		return PreferenceManager.getDefaultSharedPreferences(ctx).getBoolean(key, false);
 	}
@@ -232,6 +241,14 @@ public class Utils {
 
 	public static void setIntPrefs(Context ctx, String key, int value) {
 		PreferenceManager.getDefaultSharedPreferences(ctx).edit().putInt(key, value).commit();
+	}
+
+	public static long getLongPrefs(Context ctx, String key) {
+		return PreferenceManager.getDefaultSharedPreferences(ctx).getLong(key, 0);
+	}
+
+	public static void setLongPrefs(Context ctx, String key, long value) {
+		PreferenceManager.getDefaultSharedPreferences(ctx).edit().putLong(key, value).commit();
 	}
 
 	public static void clearPrefs(Context ctx) {

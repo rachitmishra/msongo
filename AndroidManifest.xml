@@ -19,9 +19,10 @@
         android:label="@string/app_name" >
         <activity
             android:name=".activity.HomeActivity"
-            android:label=""
+            android:label="@string/app_name"
             android:logo="@android:color/transparent"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Msdcs"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +38,7 @@
             android:value="AIzaSyA2B_KGATQXk9z5jEJJPzLnxMQh8bvU_uc" />
 
         <provider
-            android:name=".provider.SurveyProvider"
+            android:name="in.ceeq.msdcs.provider.SurveyProvider"
             android:authorities="com.ceeq.msdcs.surveyprovider"
             android:enabled="true"
             android:exported="true" >

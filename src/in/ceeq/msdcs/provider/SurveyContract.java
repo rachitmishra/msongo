@@ -14,13 +14,6 @@ public final class SurveyContract {
 		public static final String JOIN_PATH = "surveydetails";
 
 		/**
-		 * Location Id <br/>
-		 * <b>type</b> Integer <br/>
-		 * <b>default</b> NOT NULL
-		 */
-		public static final String LOCATION_ID = "location_id";
-
-		/**
 		 * User Id <br/>
 		 * <b>type</b> Integer <br/>
 		 * <b>default</b> NOT NULL
@@ -42,16 +35,26 @@ public final class SurveyContract {
 
 		public static final Uri JOIN_CONTENT_URI = Utils.getTableContentUri(JOIN_PATH);
 
-		public static final String[] DETAILED_PROJECTION = { LOCATION_ID, DETAILS_ID,
-				Utils.getJoinColumnName(PATH, _ID), Utils.getJoinColumnName(Details.PATH, _ID),
-				Utils.getJoinColumnName(Locations.PATH, _ID), Details.DATE_SOWING, Details.DATE_SURVEY,
-				Details.DISEASE_NAME, Details.DISEASE_SCORE, Details.PEST_INFESTATION_COUNT, Details.PEST_NAME,
-				Locations.LATITUDE, Locations.LONGITUDE, Locations.PROVIDER, Locations.ACCURACY, Locations.ALTITUDE,
-				Locations.TIME };
+		public static final String[] DETAILED_PROJECTION = { Utils.getJoinColumnName(Surveys.PATH, _ID), USER_ID,
+				DETAILS_ID, Utils.getJoinColumnName(Details.PATH, _ID),
+				Utils.getJoinColumnName(Details.PATH, Details.DATE_SOWING),
+				Utils.getJoinColumnName(Details.PATH, Details.DATE_SURVEY),
+				Utils.getJoinColumnName(Details.PATH, Details.CROP_STAGE),
+				Utils.getJoinColumnName(Details.PATH, Details.DISEASE_NAME),
+				Utils.getJoinColumnName(Details.PATH, Details.DISEASE_SEVERITY_SCORE),
+				Utils.getJoinColumnName(Details.PATH, Details.PEST_INFESTATION_COUNT),
+				Utils.getJoinColumnName(Details.PATH, Details.PEST_NAME),
+				Utils.getJoinColumnName(Details.PATH, Details.LATITUDE),
+				Utils.getJoinColumnName(Details.PATH, Details.LONGITUDE), Utils.getJoinColumnName(Users.PATH, _ID),
+				Utils.getJoinColumnName(Users.PATH, Users.NAME), Utils.getJoinColumnName(Users.PATH, Users.EMAIL),
+				Utils.getJoinColumnName(Surveys.PATH, CREATED_ON), Utils.getJoinColumnName(Surveys.PATH, CREATED_BY),
+				Utils.getJoinColumnName(Surveys.PATH, MODIFIED_ON), Utils.getJoinColumnName(Surveys.PATH, MODIFIED_BY),
+				Utils.getJoinColumnName(Surveys.PATH, SYNC_ID), Utils.getJoinColumnName(Surveys.PATH, SOFT_DELETED),
+				Utils.getJoinColumnName(Surveys.PATH, DELETED_ON), Utils.getJoinColumnName(Surveys.PATH, DELETED_BY) };
 
 		public static String create() {
 			return create(PATH,
-					new StringBuilder(LOCATION_ID).append(INTEGER).append(NOT_NULL).append(COMMA).append(DETAILS_ID)
+					new StringBuilder(USER_ID).append(INTEGER).append(NOT_NULL).append(COMMA).append(DETAILS_ID)
 							.append(INTEGER).append(NOT_NULL).toString());
 		}
 
@@ -104,73 +107,6 @@ public final class SurveyContract {
 
 	}
 
-	public static final class Locations extends BaseColumns {
-
-		public static final String PATH = "locations";
-
-		/**
-		 * Latitude <br/>
-		 * <b>type</b> Double <br/>
-		 * <b>default</b> NOT NULL
-		 */
-		public static final String LATITUDE = "latitude";
-
-		/**
-		 * Longitude <br/>
-		 * <b>type</b> Double <br/>
-		 * <b>default</b> NOT NULL
-		 */
-		public static final String LONGITUDE = "longitude";
-
-		/**
-		 * Accuracy <br/>
-		 * <b>type</b> Double <br/>
-		 * <b>default</b> NULL
-		 */
-		public static final String ACCURACY = "accuracy";
-
-		/**
-		 * Altitude <br/>
-		 * <b>type</b> Double <br/>
-		 * <b>default</b> NULL
-		 */
-		public static final String ALTITUDE = "altitude";
-
-		/**
-		 * Location Provider Examples. Network or Precise <br/>
-		 * <b>type</b> String <br/>
-		 * <b>default</b> NULL
-		 */
-		public static final String PROVIDER = "provider";
-
-		/**
-		 * Location Time <br/>
-		 * <b>type</b> Integer <br/>
-		 * <b>default</b> NULL
-		 */
-		public static final String TIME = "location_time";
-
-		public static final String CONTENT_ITEM_TYPE = Utils.getTableContentItemType(PATH);
-
-		public static final String CONTENT_TYPE = Utils.getTableContentType(PATH);
-
-		public static final Uri CONTENT_URI = Utils.getTableContentUri(PATH);
-
-		public static String create() {
-			return create(
-					PATH,
-					new StringBuilder(LATITUDE).append(REAL).append(NOT_NULL).append(COMMA).append(LONGITUDE)
-							.append(REAL).append(NOT_NULL).append(COMMA).append(ACCURACY).append(REAL).append(COMMA)
-							.append(ALTITUDE).append(REAL).append(COMMA).append(PROVIDER).append(TEXT).append(COMMA)
-							.append(TIME).append(INTEGER).toString());
-		}
-
-		public static String drop() {
-			return drop(PATH);
-		}
-
-	}
-
 	public static final class Details extends BaseColumns {
 
 		public static final String PATH = "details";
@@ -191,7 +127,7 @@ public final class SurveyContract {
 
 		/**
 		 * Crop Stage <br/>
-		 * <b>type</b> String <br/>
+		 * <b>type</b> Integer <br/>
 		 * <b>default</b> NULL
 		 */
 		public static final String CROP_STAGE = "crop_stage";
@@ -208,7 +144,7 @@ public final class SurveyContract {
 		 * <b>type</b> String <br/>
 		 * <b>default</b> NULL
 		 */
-		public static final String DISEASE_SCORE = "disease_score";
+		public static final String DISEASE_SEVERITY_SCORE = "disease_score";
 
 		/**
 		 * Pest Name <br/>
@@ -224,6 +160,20 @@ public final class SurveyContract {
 		 */
 		public static final String PEST_INFESTATION_COUNT = "pest_infestation_count";
 
+		/**
+		 * Latitude <br/>
+		 * <b>type</b> Double <br/>
+		 * <b>default</b> NOT NULL
+		 */
+		public static final String LATITUDE = "latitude";
+
+		/**
+		 * Longitude <br/>
+		 * <b>type</b> Double <br/>
+		 * <b>default</b> NOT NULL
+		 */
+		public static final String LONGITUDE = "longitude";
+
 		public static final String CONTENT_ITEM_TYPE = Utils.getTableContentItemType(PATH);
 
 		public static final String CONTENT_TYPE = Utils.getTableContentType(PATH);
@@ -232,10 +182,12 @@ public final class SurveyContract {
 
 		public static String create() {
 			String columns = new StringBuilder(DATE_SOWING).append(INTEGER).append(NOT_NULL).append(COMMA)
-					.append(DATE_SURVEY).append(INTEGER).append(NOT_NULL).append(COMMA).append(CROP_STAGE).append(TEXT)
-					.append(COMMA).append(DISEASE_NAME).append(TEXT).append(COMMA).append(DISEASE_SCORE).append(TEXT)
-					.append(COMMA).append(PEST_NAME).append(TEXT).append(COMMA).append(PEST_INFESTATION_COUNT)
-					.append(TEXT).toString();
+					.append(DATE_SURVEY).append(INTEGER).append(NOT_NULL).append(COMMA).append(CROP_STAGE)
+					.append(INTEGER).append(COMMA).append(DISEASE_NAME).append(TEXT).append(COMMA)
+					.append(DISEASE_SEVERITY_SCORE).append(TEXT).append(COMMA).append(PEST_NAME).append(TEXT)
+					.append(COMMA).append(PEST_INFESTATION_COUNT).append(TEXT).append(COMMA).append(LATITUDE)
+					.append(REAL).append(NOT_NULL).append(COMMA).append(LONGITUDE).append(REAL).append(NOT_NULL)
+					.toString();
 			return create(PATH, columns);
 		}
 

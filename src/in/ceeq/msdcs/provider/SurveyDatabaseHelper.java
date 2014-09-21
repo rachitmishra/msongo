@@ -8,6 +8,8 @@ import android.util.Log;
 
 public class SurveyDatabaseHelper extends SQLiteOpenHelper {
 
+	public static final String SEMI_COLON = ";";
+
 	private static final String LOG_TAG = SurveyDatabaseHelper.class.getCanonicalName();
 
 	private static final String DB_NAME = "mobilesurveydata";
@@ -20,14 +22,17 @@ public class SurveyDatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL(SurveyContract.Surveys.create() + SurveyContract.Details.create()
-				+ SurveyContract.Locations.create());
+		db.execSQL(SurveyContract.Users.create());
+		db.execSQL(SurveyContract.Details.create());
+		db.execSQL(SurveyContract.Surveys.create());
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		Log.w(LOG_TAG, "Upgrading database. Existing contents will be lost. [" + oldVersion + "]->[" + newVersion + "]");
-		db.execSQL(SurveyContract.Surveys.drop() + SurveyContract.Details.drop() + SurveyContract.Locations.drop());
+		db.execSQL(SurveyContract.Surveys.drop());
+		db.execSQL(SurveyContract.Details.drop());
+		db.execSQL(SurveyContract.Users.drop());
 		onCreate(db);
 	}
 }

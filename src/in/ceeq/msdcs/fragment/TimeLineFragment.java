@@ -13,6 +13,7 @@ import android.support.v4.widget.CursorAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class TimeLineFragment extends BaseListFragment implements LoaderCallbacks<Cursor> {
 
@@ -37,6 +38,10 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		mTimeLineAdapter = new TimeLineAdapter(getActivity(), null, false);
+		setListAdapter(mTimeLineAdapter);
+		setupLoader(false);
 	}
 
 	@Override
@@ -88,7 +93,7 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 	@Override
 	public void onResume() {
 		super.onResume();
-		setupLoader(false);
+		setupLoader(true);
 	}
 
 	@Override
@@ -105,9 +110,8 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 			mTimeLineAdapter.notifyDataSetChanged();
 			getListView().smoothScrollToPositionFromTop(0, 0, 0);
 			setListShown(true);
-			getListView().setItemChecked(0, true);
 		} else {
-			setListShown(false);
+			setListShown(true);
 			setEmptyText("No data available.");
 		}
 	}
@@ -127,8 +131,27 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 			if (convertView == null) {
 				convertView = getActivity().getLayoutInflater().inflate(R.layout.list_row_time_line, parent, false);
 			}
+
 			Cursor item = (Cursor) getItem(position);
+
+			TextView sowingDate = (TextView) convertView.findViewById(R.id.sowing_date);
+			TextView surveyDate = (TextView) convertView.findViewById(R.id.survey_date);
+			TextView cropStage = (TextView) convertView.findViewById(R.id.crop_stage);
+			TextView diseaseSeverity = (TextView) convertView.findViewById(R.id.disease_severity_score);
+			TextView pestCount = (TextView) convertView.findViewById(R.id.pest_count);
+
+			sowingDate.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)));
+			surveyDate.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY)));
+			cropStage.setText(getCropStageString(item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));
+			diseaseSeverity.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE)));
+			pestCount.setText(item.getString(item.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT)));
+
 			return convertView;
+		}
+
+		public String getCropStageString(int index) {
+			String[] cropStages = getResources().getStringArray(R.array.crop_stages);
+			return cropStages[index];
 		}
 
 		@Override

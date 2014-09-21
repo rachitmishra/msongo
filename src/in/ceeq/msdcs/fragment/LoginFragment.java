@@ -1,6 +1,7 @@
 package in.ceeq.msdcs.fragment;
 
 import in.ceeq.msdcs.R;
+import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.utils.Utils;
 
@@ -9,8 +10,11 @@ import java.util.List;
 
 import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -32,12 +36,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * A login screen that offers login via email/password.
- */
 public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
-
-	private static final String[] DUMMY_CREDENTIALS = new String[] { "foo@example.com:hello", "bar@example.com:world" };
 
 	private TextView mNameView;
 
@@ -47,9 +46,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
 	private View mProgressView;
 
-	private View mLoginFormView;
-
-	public static LoginFragment getInstance() {
+	public static LoginFragment newInstance() {
 		return new LoginFragment();
 	}
 
@@ -61,34 +58,43 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	private void setupLoginUi(View loginView) {
+
+		Typeface typeFace = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Light.ttf");
+
+		((TextView) loginView.findViewById(R.id.logo)).setTypeface(typeFace);
+		((TextView) loginView.findViewById(R.id.header)).setTypeface(typeFace);
+
 		mNameView = (EditText) loginView.findViewById(R.id.name);
+		mNameView.setTypeface(typeFace);
 
 		mEmailView = (AutoCompleteTextView) loginView.findViewById(R.id.email);
+		mEmailView.setTypeface(typeFace);
 		populateAutoComplete();
 
 		mPasswordView = (EditText) loginView.findViewById(R.id.password);
+		mPasswordView.setTypeface(typeFace);
+
 		mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
 			@Override
 			public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
 				if (id == R.id.login || id == EditorInfo.IME_NULL) {
-					attemptLogin();
+					registerUser();
 					return true;
 				}
 				return false;
 			}
 		});
 
-		Button mEmailSignInButton = (Button) loginView.findViewById(R.id.email_sign_in_button);
-		mEmailSignInButton.setOnClickListener(new OnClickListener() {
+		Button mRegisterButton = (Button) loginView.findViewById(R.id.email_sign_in_button);
+		mRegisterButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				attemptLogin();
+				registerUser();
 			}
 		});
 
-		mLoginFormView = loginView.findViewById(R.id.login_form);
 		mProgressView = loginView.findViewById(R.id.login_progress);
 	}
 
@@ -96,16 +102,23 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		getLoaderManager().initLoader(0, null, this);
 	}
 
-	public void attemptLogin() {
+	public void registerUser() {
 
 		mEmailView.setError(null);
 		mPasswordView.setError(null);
 
+		String name = mNameView.getText().toString();
 		String email = mEmailView.getText().toString();
 		String password = mPasswordView.getText().toString();
 
 		boolean cancel = false;
 		View focusView = null;
+
+		if (!TextUtils.isEmpty(name) && !isNameValid(name)) {
+			mNameView.setError(getString(R.string.error_invalid_name));
+			focusView = mNameView;
+			cancel = true;
+		}
 
 		if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
 			mPasswordView.setError(getString(R.string.error_invalid_password));
@@ -127,15 +140,15 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 			focusView.requestFocus();
 		} else {
 			showProgress(true);
-
-			UserValidationQuery.newInstance(getActivity().getContentResolver(), getActivity()).startQuery(
-					0,
-					null,
-					SurveyContract.Users.CONTENT_URI,
-					SurveyContract.Users.DEFAULT_PROJECTION,
-					new StringBuilder(SurveyContract.Users.EMAIL).append(" = ? AND ")
-							.append(SurveyContract.Users.PASSWORD).append("password = ?").toString(),
-					new String[] { mEmailView.getText().toString(), mPasswordView.getText().toString() }, null);
+			ContentValues newUserValues = new ContentValues();
+			mEmailView.setEnabled(false);
+			mNameView.setEnabled(false);
+			mPasswordView.setEnabled(false);
+			newUserValues.put(SurveyContract.Users.NAME, name);
+			newUserValues.put(SurveyContract.Users.EMAIL, email);
+			newUserValues.put(SurveyContract.Users.PASSWORD, password);
+			NewUserQuery.newInstance(getActivity().getContentResolver(), getActivity()).startInsert(0, null,
+					SurveyContract.Users.CONTENT_URI, newUserValues);
 		}
 	}
 
@@ -147,31 +160,26 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		}
 	}
 
-	private static class UserValidationQuery extends AsyncQueryHandler {
+	private static class NewUserQuery extends AsyncQueryHandler {
 
 		private Context mContext;
 
-		public static UserValidationQuery newInstance(ContentResolver contentResolver, Context context) {
-			return new UserValidationQuery(contentResolver, context);
+		public static NewUserQuery newInstance(ContentResolver contentResolver, Context context) {
+			return new NewUserQuery(contentResolver, context);
 		}
 
-		public UserValidationQuery(ContentResolver contentResolver, Context context) {
+		public NewUserQuery(ContentResolver contentResolver, Context context) {
 			super(contentResolver);
 			this.mContext = context;
 		}
 
 		@Override
-		protected void onQueryComplete(int token, Object cookie, Cursor cursor) {
-			if (cursor != null && cursor.getCount() > 0) {
-				Utils.setStringPrefs(mContext, Utils.CURRENT_USER_ID,
-						cursor.getString(cursor.getColumnIndex(SurveyContract.Users._ID)));
-				Utils.setStringPrefs(mContext, Utils.CURRENT_USER_NAME,
-						cursor.getString(cursor.getColumnIndex(SurveyContract.Users.NAME)));
-				Utils.setStringPrefs(mContext, Utils.CURRENT_USER_EMAIL,
-						cursor.getString(cursor.getColumnIndex(SurveyContract.Users.EMAIL)));
-			} else {
-				Toast.makeText(mContext, "User or password is incorrect.", Toast.LENGTH_SHORT).show();
-			}
+		protected void onInsertComplete(int token, Object cookie, Uri uri) {
+			Utils.setBooleanPrefs(mContext, Utils.IS_LOGGED_IN, true);
+			Utils.setLongPrefs(mContext, Utils.CURRENT_USER_ID, ContentUris.parseId(uri));
+			Toast.makeText(mContext, "You are registered.", Toast.LENGTH_SHORT).show();
+			((HomeActivity) mContext).replaceFragment(0);
+			((HomeActivity) mContext).toggleAppbar(true);
 		}
 	}
 
@@ -181,6 +189,10 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
 	private boolean isPasswordValid(String password) {
 		return password.length() > 4;
+	}
+
+	private boolean isNameValid(String name) {
+		return name.length() > 3;
 	}
 
 	@Override
@@ -222,11 +234,8 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 	}
 
 	private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
-		// Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
-
 		mEmailView.setAdapter(adapter);
-
 	}
 }

@@ -10,4 +10,9 @@
 	<color name="blue">#3498db</color>
 	<color name="timeline_background">#e5e5e5</color>
 	
+    <color name="msdcs_color">#99cc00</color>
+    <color name="text_medium">#454545</color>
+    <color name="text_google_sheet">#0f9d58</color>
+    <color name="text_microsoft_excel">#1abc9c</color>
+    <color name="text_adobe_pdf">#e74c3c</color>
 </resources>

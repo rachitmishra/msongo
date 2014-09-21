@@ -13,8 +13,7 @@
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blue"
-        android:fillViewport="true" >
+        android:background="@color/msdcs_color" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,10 +21,10 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="156dp"
                 android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
                 android:padding="16dp"
                 android:text="MSDCS"
@@ -37,9 +36,19 @@
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="16dp"
                 android:background="@color/card_background"
                 android:orientation="vertical"
                 android:padding="@dimen/activity_horizontal_margin" >
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Register yourself"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/text_medium"
+                    android:textSize="24sp" />
 
                 <EditText
                     android:id="@+id/name"
@@ -81,10 +90,13 @@
                 <Button
                     android:id="@+id/email_sign_in_button"
                     style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:layout_marginTop="16dp"
                     android:text="@string/action_register"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold" />
 
                 <ProgressBar

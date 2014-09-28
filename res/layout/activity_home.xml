@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -49,7 +50,7 @@
             android:dividerPadding="6dp"
             android:orientation="horizontal"
             android:showDividers="middle"
-            android:visibility="visible" >
+            android:visibility="gone" >
 
             <TextView
                 android:id="@+id/mapLabel"

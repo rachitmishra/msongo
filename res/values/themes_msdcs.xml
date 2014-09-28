@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="Msdcs" parent="@style/MsdcsCompat"/>
+
+  <style name="MsdcsCompat" parent="Theme.AppCompat.Light">
+	<item name="android:windowNoTitle">true</item>
+    <item name="android:editTextBackground">@drawable/msdcs_edit_text_holo_light</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMsdcs</item>
+
+    <item name="android:buttonStyle">@style/ButtonMsdcs</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonMsdcs</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMsdcs</item>
+    
+     <item name="android:spinnerStyle">@style/SpinnerMsdcs</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemMsdcs</item>
+
+  </style>
+
+</resources>

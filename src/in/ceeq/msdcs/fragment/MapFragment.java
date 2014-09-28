@@ -4,6 +4,7 @@ import hirondelle.date4j.DateTime;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
+import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import in.ceeq.msdcs.utils.Utils;
 
 import java.util.Calendar;
@@ -25,15 +26,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -70,17 +72,17 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private MapView mMapView;
 
-	private EditText mSowingDate;
+	private FloatLabeledEditText mSowingDate;
 
-	private EditText mSurveyDate;
+	private FloatLabeledEditText mSurveyDate;
 
-	private EditText mDiseaseName;
+	private FloatLabeledEditText mDiseaseName;
 
-	private EditText mDiseaseSeverityScore;
+	private FloatLabeledEditText mDiseaseSeverityScore;
 
-	private EditText mPestName;
+	private FloatLabeledEditText mPestName;
 
-	private EditText mPestInfestationCount;
+	private FloatLabeledEditText mPestInfestationCount;
 
 	private Spinner mCropStageSpinner;
 
@@ -171,18 +173,18 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		mFormLayout = (LinearLayout) rootView.findViewById(R.id.formLayout);
 		mCropStageSpinner = (Spinner) rootView.findViewById(R.id.cropStage);
 
-		mSowingDate = (EditText) rootView.findViewById(R.id.sowingDate);
-		mSowingDate.setTypeface(typeFace);
-		mSurveyDate = (EditText) rootView.findViewById(R.id.surveyDate);
-		mSurveyDate.setTypeface(typeFace);
-		mDiseaseName = (EditText) rootView.findViewById(R.id.diseaseName);
-		mDiseaseName.setTypeface(typeFace);
-		mDiseaseSeverityScore = (EditText) rootView.findViewById(R.id.diseaseSeverity);
-		mDiseaseSeverityScore.setTypeface(typeFace);
-		mPestName = (EditText) rootView.findViewById(R.id.pestName);
-		mPestName.setTypeface(typeFace);
-		mPestInfestationCount = (EditText) rootView.findViewById(R.id.pestInfestationCount);
-		mPestInfestationCount.setTypeface(typeFace);
+		mSowingDate = (FloatLabeledEditText) rootView.findViewById(R.id.sowingDate);
+		mSowingDate.getEditText().setTypeface(typeFace);
+		mSurveyDate = (FloatLabeledEditText) rootView.findViewById(R.id.surveyDate);
+		mSurveyDate.getEditText().setTypeface(typeFace);
+		mDiseaseName = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseName);
+		mDiseaseName.getEditText().setTypeface(typeFace);
+		mDiseaseSeverityScore = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseSeverity);
+		mDiseaseSeverityScore.getEditText().setTypeface(typeFace);
+		mPestName = (FloatLabeledEditText) rootView.findViewById(R.id.pestName);
+		mPestName.getEditText().setTypeface(typeFace);
+		mPestInfestationCount = (FloatLabeledEditText) rootView.findViewById(R.id.pestInfestationCount);
+		mPestInfestationCount.getEditText().setTypeface(typeFace);
 
 		((TextView) rootView.findViewById(R.id.addLabel)).setTypeface(typeFace);
 		mMapLayout = (LinearLayout) rootView.findViewById(R.id.toggleMapLayout);
@@ -305,6 +307,11 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	private void saveSurveyData() {
 		ContentValues surveyValues = new ContentValues();
 
+		if (!validate()) {
+			Toast.makeText(getActivity(), "Entered values are not correct.", Toast.LENGTH_SHORT).show();
+			return;
+		}
+
 		surveyValues.put(
 				SurveyContract.Details.DATE_SOWING,
 				DateTime.forDateOnly((int) mSowingDate.getTag(R.string.tag_year),
@@ -325,9 +332,26 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		surveyValues.put(SurveyContract.Details.LONGITUDE, longitude);
 		surveyValues.put(SurveyContract.Surveys.USER_ID, Utils.getCurrentUser(getActivity()).mId + "");
 		mMap.addMarker(new MarkerOptions().draggable(true).position(new LatLng(latitude, longitude))
-				.title(surveyDate.format("DD-MM-YY")));
+				.title(surveyDate.format("DD MM YY")));
 		NewSurveyQuery.newInstance(getActivity().getContentResolver(), getActivity()).startInsert(0, null,
 				SurveyContract.Surveys.CONTENT_URI, surveyValues);
+	}
+
+	private boolean validate() {
+		boolean valid = true;
+
+		if (mSowingDate.getText().length() == 0 || TextUtils.isEmpty(mSowingDate.getText().toString())) {
+			valid = false;
+			mSowingDate.setError("Sowing date cannot be empty.");
+		}
+
+		if (mSurveyDate.getText().length() == 0 || TextUtils.isEmpty(mSurveyDate.getText().toString())) {
+			valid = false;
+			mSowingDate.setError("Sowing date cannot be empty.");
+		}
+
+		return valid;
+
 	}
 
 	private static class NewSurveyQuery extends AsyncQueryHandler {
@@ -439,5 +463,55 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	@Override
 	public void onLoaderReset(Loader<Cursor> arg0) {
+	}
+
+	private class SpinnerAdapter extends BaseAdapter {
+
+		private LayoutInflater mInflater;
+
+		private String[] values;
+
+		public SpinnerAdapter(Context context, String[] values) {
+			mInflater = LayoutInflater.from(context);
+		}
+
+		@Override
+		public int getCount() {
+			return values.length;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return position;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			final ListContent holder;
+			if (convertView == null) {
+				convertView = mInflater.inflate(R.layout.spinner_item, null);
+				holder = new ListContent();
+				holder.name = (TextView) convertView.findViewById(R.id.textView1);
+				convertView.setTag(holder);
+			} else {
+				holder = (ListContent) convertView.getTag();
+			}
+
+			Typeface typeFace = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Light.ttf");
+			holder.name.setTypeface(typeFace);
+			holder.name.setText("" + values[position]);
+			return convertView;
+		}
+	}
+
+	private static class ListContent {
+
+		TextView name;
+
 	}
 }

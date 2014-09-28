@@ -3,6 +3,7 @@ package in.ceeq.msdcs.fragment;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
+import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import in.ceeq.msdcs.utils.Utils;
 
 import java.util.ArrayList;
@@ -32,17 +33,16 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
-	private TextView mNameView;
+	private FloatLabeledEditText mNameView;
 
 	private AutoCompleteTextView mEmailView;
 
-	private EditText mPasswordView;
+	private FloatLabeledEditText mPasswordView;
 
 	private View mProgressView;
 
@@ -64,15 +64,15 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		((TextView) loginView.findViewById(R.id.logo)).setTypeface(typeFace);
 		((TextView) loginView.findViewById(R.id.header)).setTypeface(typeFace);
 
-		mNameView = (EditText) loginView.findViewById(R.id.name);
-		mNameView.setTypeface(typeFace);
+		mNameView = (FloatLabeledEditText) loginView.findViewById(R.id.name);
+		mNameView.getEditText().setTypeface(typeFace);
 
 		mEmailView = (AutoCompleteTextView) loginView.findViewById(R.id.email);
 		mEmailView.setTypeface(typeFace);
 		populateAutoComplete();
 
-		mPasswordView = (EditText) loginView.findViewById(R.id.password);
-		mPasswordView.setTypeface(typeFace);
+		mPasswordView = (FloatLabeledEditText) loginView.findViewById(R.id.password);
+		mPasswordView.getEditText().setTypeface(typeFace);
 
 		mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 

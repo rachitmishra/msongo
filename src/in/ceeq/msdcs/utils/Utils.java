@@ -29,11 +29,12 @@ public class Utils {
 
 	public static void hideKeyboard(Activity activity) {
 		try {
+
 			InputMethodManager inputManager = (InputMethodManager) activity
 					.getSystemService(Context.INPUT_METHOD_SERVICE);
-			inputManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
-					InputMethodManager.HIDE_NOT_ALWAYS);
+			inputManager.hideSoftInputFromWindow(activity.getWindow().getDecorView().getWindowToken(), 0);
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

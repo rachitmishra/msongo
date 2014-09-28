@@ -1,8 +1,13 @@
 package in.ceeq.msdcs.fragment;
 
+import hirondelle.date4j.DateTime;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.utils.BaseListFragment;
+
+import java.util.Locale;
+import java.util.TimeZone;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -99,7 +104,7 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 	@Override
 	public Loader<Cursor> onCreateLoader(int arg0, Bundle arg1) {
 		return new CursorLoader(getActivity(), SurveyContract.Surveys.JOIN_CONTENT_URI,
-				SurveyContract.Surveys.DETAILED_PROJECTION, null, null, null);
+				SurveyContract.Surveys.DETAILED_PROJECTION, null, null, SurveyContract.Details._ID + " DSC");
 	}
 
 	@Override
@@ -108,7 +113,6 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 			cursor.moveToFirst();
 			mTimeLineAdapter.swapCursor(cursor);
 			mTimeLineAdapter.notifyDataSetChanged();
-			getListView().smoothScrollToPositionFromTop(0, 0, 0);
 			setListShown(true);
 		} else {
 			setListShown(true);
@@ -134,14 +138,24 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 
 			Cursor item = (Cursor) getItem(position);
 
+			TextView dateView = (TextView) convertView.findViewById(R.id.dateView);
 			TextView sowingDate = (TextView) convertView.findViewById(R.id.sowing_date);
 			TextView surveyDate = (TextView) convertView.findViewById(R.id.survey_date);
 			TextView cropStage = (TextView) convertView.findViewById(R.id.crop_stage);
 			TextView diseaseSeverity = (TextView) convertView.findViewById(R.id.disease_severity_score);
 			TextView pestCount = (TextView) convertView.findViewById(R.id.pest_count);
 
-			sowingDate.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)));
-			surveyDate.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY)));
+			DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SOWING), TimeZone.getDefault()).format(
+					"DD-MM-YYYY");
+			DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY), TimeZone.getDefault()).format(
+					"DD-MM-YYYY");
+
+			sowingDate.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SOWING),
+					TimeZone.getDefault()).format("DD MM YYYY"));
+			surveyDate.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY),
+					TimeZone.getDefault()).format("DD MM YYYY"));
+			dateView.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY),
+					TimeZone.getDefault()).format("DD MMM", Locale.getDefault()));
 			cropStage.setText(getCropStageString(item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));
 			diseaseSeverity.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE)));
 			pestCount.setText(item.getString(item.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT)));

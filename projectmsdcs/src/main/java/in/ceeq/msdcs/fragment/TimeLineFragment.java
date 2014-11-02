@@ -25,12 +25,12 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 
     private TimeLineAdapter mTimeLineAdapter;
 
+    public TimeLineFragment () {
+    }
+
     public static TimeLineFragment newInstance () {
         TimeLineFragment fragment = new TimeLineFragment();
         return fragment;
-    }
-
-    public TimeLineFragment () {
     }
 
     @Override
@@ -52,15 +52,15 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
     }
 
     @Override
-    public void onListItemClick (ListView listView, View view, int position, long id) {
-        super.onListItemClick(listView, view, position, id);
-        // Cursor c = (Cursor) listView.getAdapter().getItem(position);
-    }
-
-    @Override
     public void onResume () {
         super.onResume();
         setupLoader(true);
+    }
+
+    @Override
+    public void onListItemClick (ListView listView, View view, int position, long id) {
+        super.onListItemClick(listView, view, position, id);
+        // Cursor c = (Cursor) listView.getAdapter().getItem(position);
     }
 
     @Override
@@ -127,7 +127,7 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
             holder.sowingDate.setText(Utils.getFormattedDate(
                     item.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)), "dd-MMMM-yyyy"));
             holder.surveyDate.setText(Utils.getFormattedDate(
-                    item.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)), "dd-MMMM-yyyy"));
+                    item.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY)), "dd-MMMM-yyyy"));
             holder.userView.setText(item.getString(item.getColumnIndex(SurveyContract.Users.NAME)).substring(0, 1));
             holder.cropStage.setText(Utils.getCropStageString(getActivity(),
                     item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));
@@ -140,13 +140,13 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
         }
 
         @Override
-        public void bindView (View arg0, Context arg1, Cursor arg2) {
-
+        public View newView (Context arg0, Cursor arg1, ViewGroup arg2) {
+            return null;
         }
 
         @Override
-        public View newView (Context arg0, Cursor arg1, ViewGroup arg2) {
-            return null;
+        public void bindView (View arg0, Context arg1, Cursor arg2) {
+
         }
     }
 

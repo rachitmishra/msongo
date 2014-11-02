@@ -51,9 +51,9 @@
     <!-- Export -->
     <string name="export_dialog_hint">Enter a name for export file</string>
     <string name="export_label">Export your data</string>
-    <string name="export_text">TEXT (.txt)</string>
-    <string name="export_pdf">PDF (.pdf)</string>
-    <string name="export_csv">CSV (.csv)</string>
+    <string name="export_text">Text</string>
+    <string name="export_pdf">PDF</string>
+    <string name="export_csv">CSV (Excel)</string>
 
     <!-- Tag keys -->
     <string name="tag_latitude">tag_latitude</string>

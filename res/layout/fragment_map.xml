@@ -101,21 +101,14 @@
             android:src="@drawable/ic_action_content_remove" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/a"
+    <LinearLayout
+        android:id="@+id/formLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" >
+        android:background="@drawable/background_card"
+        android:visibility="gone" >
 
-        <LinearLayout
-            android:id="@+id/formLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_card"
-            android:visibility="gone" >
-
-            <include layout="@layout/base_add_content_layout" />
-        </LinearLayout>
-    </ScrollView>
+        <include layout="@layout/base_add_content_layout" />
+    </LinearLayout>
 
 </RelativeLayout>

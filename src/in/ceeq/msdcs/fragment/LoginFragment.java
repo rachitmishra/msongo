@@ -65,6 +65,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
 		((TextView) loginView.findViewById(R.id.logo)).setTypeface(typeFace);
 		((TextView) loginView.findViewById(R.id.header)).setTypeface(typeFace);
+		((TextView) loginView.findViewById(R.id.logo_full)).setTypeface(typeFace);
 
 		mNameView = (EditText) loginView.findViewById(R.id.name);
 		mNameView.setTypeface(typeFace);

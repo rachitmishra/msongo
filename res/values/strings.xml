@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_abbrevation">MSDCS</string>
     <string name="app_name">Mobile Survey &amp; Data Collection</string>
 
     <!-- Tabs -->
@@ -15,6 +16,7 @@
     <string name="cancel">Cancel</string>
 
     <!-- Login -->
+    <string name="login_register_your_self">Hello, Register yourself</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_name">Name</string>
     <string name="prompt_password">Password (optional)</string>
@@ -30,14 +32,14 @@
     <string name="content_desc_gps_location">Move to current location</string>
     <string name="content_desc_zoom_in">Zoom in</string>
     <string name="content_desc_zoom_out">Zoom out</string>
-   <string name="map_add_content_header">Enter details</string>
+    <string name="map_add_content_header">Enter details</string>
     <string name="map_disease_name">Date of survey</string>
-	<string name="map_date_of_sowing">Date of sowing</string>
+    <string name="map_date_of_sowing">Date of sowing</string>
     <string name="map_date_of_survey">Disease name</string>
     <string name="map_disease_severity_score">Disease severity score</string>
     <string name="map_pest_name">Pest name</string>
     <string name="map_pest_infestation_count">Pest infestation count</string>
-	
+
     <string-array name="map_crop_stages">
         <item>Vegitative</item>
         <item>Flowering</item>
@@ -45,8 +47,7 @@
         <item>Seed filling</item>
         <item>Oil accumulation</item>
     </string-array>
-    
-    
+
     <!-- Export -->
     <string name="export_dialog_hint">Enter a name for export file</string>
     <string name="export_label">Export your data</string>

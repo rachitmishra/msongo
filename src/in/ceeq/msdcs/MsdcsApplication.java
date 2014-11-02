@@ -2,6 +2,11 @@ package in.ceeq.msdcs;
 
 import android.app.Application;
 
-public class MsdcsApplication extends Application{
+import com.crashlytics.android.Crashlytics;
 
+public class MsdcsApplication extends Application {
+
+	public void onCreate() {
+		Crashlytics.start(this);
+	}
 }

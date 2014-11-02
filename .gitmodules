@@ -1,0 +1,6 @@
+[submodule "floatlabelededittext"]
+	path = floatlabelededittext
+	url = git@github.com:wrapp/floatlabelededittext.git
+[submodule "NineOldAndroids"]
+	path = NineOldAndroids
+	url = git@github.com:JakeWharton/NineOldAndroids.git

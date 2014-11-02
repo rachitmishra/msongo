@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.google.android.gms.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/toggleMapLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_card"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/toggleMap"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@null"
+            android:contentDescription="@string/content_desc_map_toggle"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_maps_map" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/currentLocationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_card"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/currentLocation"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@null"
+            android:contentDescription="@string/content_desc_gps_location"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_device_gps_fixed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/currentLocationLayout"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/background_card"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/zoomIn"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@null"
+            android:contentDescription="@string/content_desc_zoom_in"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add" />
+
+        <ImageButton
+            android:id="@+id/zoomOut"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:contentDescription="@string/content_desc_zoom_out"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_remove" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone" >
+
+        <include layout="@layout/base_add_content_layout" />
+
+    </LinearLayout>
+
+</RelativeLayout>

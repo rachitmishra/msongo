@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/timeline_background"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/exportLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:text="@string/export_label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_medium"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/toggleMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/background_card"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/exportText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/export_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/exportExcel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/export_csv"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_microsoft_excel" />
+
+        <TextView
+            android:id="@+id/exportPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/export_pdf"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_adobe_pdf" />
+<!--  
+        <TextView
+            android:id="@+id/exportSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Google Sheets"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_google_sheet" /> -->
+
+    </LinearLayout>
+
+</RelativeLayout>

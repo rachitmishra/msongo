@@ -4,10 +4,6 @@ import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.utils.BaseListFragment;
 import in.ceeq.msdcs.utils.Utils;
-
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -22,13 +18,9 @@ import android.widget.TextView;
 
 public class TimeLineFragment extends BaseListFragment implements LoaderCallbacks<Cursor> {
 
-	private static final String STATE_ACTIVATED_POSITION = "activated_position";
-
 	public static final String LOGTAG = TimeLineFragment.class.getCanonicalName();
 
 	private static final int LOADER_ID = 1;
-
-	private int mActivatedPosition = ListView.INVALID_POSITION;
 
 	private TimeLineAdapter mTimeLineAdapter;
 
@@ -49,16 +41,6 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 		setupLoader(false);
 	}
 
-	@Override
-	public void onViewCreated(View view, Bundle savedInstanceState) {
-		super.onViewCreated(view, savedInstanceState);
-		if (savedInstanceState != null && savedInstanceState.containsKey(STATE_ACTIVATED_POSITION)) {
-			setActivatedPosition(savedInstanceState.getInt(STATE_ACTIVATED_POSITION));
-		}
-		setListShown(false);
-		setActivateOnItemClick(true);
-	}
-
 	public void setupLoader(boolean mReset) {
 		if (mReset) {
 			getLoaderManager().restartLoader(LOADER_ID, null, this);
@@ -72,27 +54,6 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 	public void onListItemClick(ListView listView, View view, int position, long id) {
 		super.onListItemClick(listView, view, position, id);
 		// Cursor c = (Cursor) listView.getAdapter().getItem(position);
-	}
-
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		if (mActivatedPosition != ListView.INVALID_POSITION) {
-			outState.putInt(STATE_ACTIVATED_POSITION, mActivatedPosition);
-		}
-	}
-
-	public void setActivateOnItemClick(boolean activateOnItemClick) {
-		getListView().setChoiceMode(activateOnItemClick ? ListView.CHOICE_MODE_SINGLE : ListView.CHOICE_MODE_NONE);
-	}
-
-	private void setActivatedPosition(int position) {
-		if (position == ListView.INVALID_POSITION) {
-			getListView().setItemChecked(mActivatedPosition, false);
-		} else {
-			getListView().setItemChecked(position, true);
-		}
-		mActivatedPosition = position;
 	}
 
 	@Override
@@ -158,10 +119,10 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 
 			Cursor item = (Cursor) getItem(position);
 
-			holder.sowingDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(item
-					.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING))));
-			holder.surveyDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(item
-					.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY))));
+			holder.sowingDate.setText(Utils.getFormattedDate(
+					item.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)), "dd-MMMM-yyyy"));
+			holder.surveyDate.setText(Utils.getFormattedDate(
+					item.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING)), "dd-MMMM-yyyy"));
 			holder.userView.setText(item.getString(item.getColumnIndex(SurveyContract.Users.NAME)).substring(0, 1));
 			holder.cropStage.setText(Utils.getCropStageString(getActivity(),
 					item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));

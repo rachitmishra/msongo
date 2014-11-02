@@ -69,7 +69,7 @@ public class Utils {
 	 * @return crop stage
 	 */
 	public static String getCropStageString(Context context, int index) {
-		String[] cropStages = context.getResources().getStringArray(R.array.crop_stages);
+		String[] cropStages = context.getResources().getStringArray(R.array.map_crop_stages);
 		return cropStages[index];
 	}
 
@@ -107,6 +107,12 @@ public class Utils {
 				SurveyContract.Details.CROP_STAGE, SurveyContract.Details.DISEASE_NAME,
 				SurveyContract.Details.DISEASE_SEVERITY_SCORE, SurveyContract.Details.PEST_NAME,
 				SurveyContract.Details.PEST_INFESTATION_COUNT };
+	}
+
+	public static String getFormattedDate(long milis, String format) {
+		Calendar calendar = new GregorianCalendar();
+		calendar.setTimeInMillis(milis);
+		return new SimpleDateFormat(format, Locale.getDefault()).format(calendar.getTime());
 	}
 
 	private static void exportPdf(Context context, String fileName, Cursor data) {
@@ -156,15 +162,10 @@ public class Utils {
 			int pestNameIndex = data.getColumnIndex(SurveyContract.Details.PEST_NAME);
 			int pestInfestationIndex = data.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT);
 
-			Calendar calendar = new GregorianCalendar();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-
 			while (data.moveToNext()) {
 				String id = data.getInt(idIndex) + "";
-				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
-				String dateOfSowing = dateFormat.format(calendar.getTimeInMillis());
-				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
-				String dateOfSurvey = dateFormat.format(calendar.getTimeInMillis());
+				String dateOfSowing = getFormattedDate(data.getLong(dateSowingIndex), "dd-MM-yyyy");
+				String dateOfSurvey = getFormattedDate(data.getLong(dateSurveyIndex), "dd-MM-yyyy");
 				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
 				String latitude = decimalFormat.format(data.getDouble(latitudeIndex));
 				String longitude = decimalFormat.format(data.getDouble(longitudeIndex));
@@ -248,15 +249,11 @@ public class Utils {
 			}
 
 			csvWrite.writeNext(exportHeaderBuilder.substring(0, exportHeaderBuilder.length() - 1).split(","));
-			Calendar calendar = new GregorianCalendar();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
 
 			while (data.moveToNext()) {
 				String id = data.getInt(idIndex) + "";
-				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
-				String dateOfSowing = dateFormat.format(calendar.getTimeInMillis());
-				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
-				String dateOfSurvey = dateFormat.format(calendar.getTimeInMillis());
+				String dateOfSowing = getFormattedDate(data.getLong(dateSowingIndex), "dd-MM-yyyy");
+				String dateOfSurvey = getFormattedDate(data.getLong(dateSurveyIndex), "dd-MM-yyyy");
 				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
 				String latitude = decimalFormat.format(data.getDouble(latitudeIndex));
 				String longitude = decimalFormat.format(data.getDouble(longitudeIndex));
@@ -298,16 +295,14 @@ public class Utils {
 			}
 			writer.append(exportHeaderBuilder.substring(0, exportHeaderBuilder.length() - 1) + "\n\n");
 			writer.flush();
-			Calendar calendar = new GregorianCalendar();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
 
 			while (data.moveToNext()) {
 				StringBuilder exportDataBuilder = new StringBuilder();
 				exportDataBuilder.append(data.getInt(idIndex) + "").append(BaseColumns.COMMA);
-				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
-				exportDataBuilder.append(dateFormat.format(calendar.getTimeInMillis())).append(BaseColumns.COMMA);
-				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
-				exportDataBuilder.append(dateFormat.format(calendar.getTimeInMillis())).append(BaseColumns.COMMA);
+				exportDataBuilder.append(getFormattedDate(data.getLong(dateSowingIndex), "dd-MM-yyyy")).append(
+						BaseColumns.COMMA);
+				exportDataBuilder.append(getFormattedDate(data.getLong(dateSurveyIndex), "dd-MM-yyyy")).append(
+						BaseColumns.COMMA);
 				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
 				exportDataBuilder.append(decimalFormat.format(data.getDouble(latitudeIndex))).append(BaseColumns.COMMA);
 				exportDataBuilder.append(decimalFormat.format(data.getDouble(longitudeIndex)))
@@ -336,7 +331,6 @@ public class Utils {
 	 */
 	public static void hideKeyboard(Activity activity) {
 		try {
-
 			InputMethodManager inputManager = (InputMethodManager) activity
 					.getSystemService(Context.INPUT_METHOD_SERVICE);
 			inputManager.hideSoftInputFromWindow(activity.getWindow().getDecorView().getWindowToken(), 0);

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:float="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="@color/card_background"
+    android:orientation="vertical"
+    tools:context="in.ceeq.msdcs.activity.HomeActivity" >
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/addLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/blue"
+        android:textSize="24sp" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/card_background"
-        android:orientation="vertical"
-        tools:context="in.ceeq.msdcs.activity.HomeActivity" >
-
-        <TextView
-            android:id="@+id/addLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Enter details"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/blue"
-            android:textSize="24sp" />
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/light_background"
             android:orientation="vertical"
             android:padding="12dp" >
@@ -38,7 +38,7 @@
                 android:layout_marginBottom="2dp"
                 android:layout_marginRight="12dp"
                 android:layout_marginTop="4dp"
-                android:text="Date of Survey"
+                android:text="@string/map_date_of_survey"
                 android:textAllCaps="true"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/light_black"
@@ -55,6 +55,7 @@
                 android:gravity="left|center_vertical"
                 android:minHeight="24dp"
                 android:padding="16dp"
+                android:text="@string/choose"
                 android:textAllCaps="true"
                 android:textColor="@color/green" />
 
@@ -64,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:layout_marginRight="12dp"
-                android:text="Date of Sowing"
+                android:text="@string/map_date_of_sowing"
                 android:textAllCaps="true"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/light_black"
@@ -80,7 +81,7 @@
                 android:gravity="left|center_vertical"
                 android:minHeight="24dp"
                 android:padding="16dp"
-                android:text="Choose"
+                android:text="@string/choose"
                 android:textAllCaps="true"
                 android:textColor="@color/green" />
 
@@ -100,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
-                android:hint="Disease Severity Score"
+                android:hint="@string/map_disease_severity_score"
                 android:inputType="text"
                 float:fletFloatingHint="Disease Severity Score" >
             </in.ceeq.msdcs.utils.FloatLabeledEditText>
@@ -111,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
-                android:hint="Pest Name"
+                android:hint="@string/map_pest_name"
                 android:inputType="text"
                 float:fletFloatingHint="Pest Name" >
             </in.ceeq.msdcs.utils.FloatLabeledEditText>
@@ -122,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
-                android:hint="Pest Infestation Count"
+                android:hint="@string/map_pest_infestation_count"
                 android:inputType="text"
                 float:fletFloatingHint="Pest Infestation Count" >
             </in.ceeq.msdcs.utils.FloatLabeledEditText>
@@ -134,61 +135,61 @@
                 android:layout_marginBottom="4dp"
                 android:padding="8dp" />
         </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:dividerPadding="8dp"
+        android:showDividers="middle"
+        android:baselineAligned="false" >
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@android:drawable/divider_horizontal_bright"
-            android:dividerPadding="8dp"
-            android:showDividers="middle" >
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/cancel"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical" >
+            <TextView
+                android:id="@+id/cancelTextView"
+                style="@android:style/Holo.SegmentedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_action_navigation_close"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="16dp"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/cancelTextView"
-                    style="@android:style/Holo.SegmentedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:drawableLeft="@drawable/ic_action_navigation_close"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:padding="16dp"
-                    android:text="Cancel"
-                    android:textAllCaps="true"
-                    android:textColor="@color/red"
-                    android:textSize="14sp" />
-            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/save"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/saveTextView"
-                    style="@android:style/ButtonBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/transparent"
-                    android:drawableLeft="@drawable/ic_action_navigation_check"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:padding="16dp"
-                    android:text="Save"
-                    android:textAllCaps="true"
-                    android:textColor="@color/green"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/saveTextView"
+                style="@android:style/ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_action_navigation_check"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="16dp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

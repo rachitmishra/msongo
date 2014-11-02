@@ -120,8 +120,6 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private Location mCurrentLocation;
 
-	private Calendar mCalendar;
-
 	public static MapFragment newInstance() {
 		return new MapFragment();
 	}
@@ -141,8 +139,8 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 		setupUi(rootView);
 
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.crop_stages,
-				android.R.layout.simple_spinner_item);
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.map_crop_stages,
+				R.layout.base_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mCropStageSpinner.setAdapter(adapter);
 		mCropStageSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -189,11 +187,12 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		mSowingDate.setTypeface(typeFace);
 		mSurveyDate = (Button) rootView.findViewById(R.id.dateOfSurvey);
 		mSurveyDate.setTypeface(typeFace);
-		mCalendar = new GregorianCalendar();
-		mSurveyDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(mCalendar.getTime()));
-		mSurveyDate.setTag(R.string.tag_year, mCalendar.get(Calendar.YEAR));
-		mSurveyDate.setTag(R.string.tag_month, mCalendar.get(Calendar.MONTH) + 1);
-		mSurveyDate.setTag(R.string.tag_day, mCalendar.get(Calendar.DAY_OF_MONTH));
+
+		Calendar calendar = new GregorianCalendar();
+		mSurveyDate.setText(Utils.getFormattedDate(System.currentTimeMillis(), "dd-MMMM-yyyy"));
+		mSurveyDate.setTag(R.string.tag_year, calendar.get(Calendar.YEAR));
+		mSurveyDate.setTag(R.string.tag_month, calendar.get(Calendar.MONTH) + 1);
+		mSurveyDate.setTag(R.string.tag_day, calendar.get(Calendar.DAY_OF_MONTH));
 		mDiseaseName = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseName);
 		mDiseaseName.getEditText().setTypeface(typeFace);
 		mDiseaseSeverityScore = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseSeverity);
@@ -304,6 +303,7 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		((HomeActivity) getActivity()).toggleAppbar(false);
 		mMapLayout.setVisibility(View.GONE);
 		mLocationLayout.setVisibility(View.GONE);
+		resetFormLayout();
 		mFormLayout.setVisibility(View.VISIBLE);
 
 		mFormLayout.setTag(R.string.tag_latitude, point.latitude);
@@ -315,9 +315,19 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		return false;
 	}
 
+	private void resetFormLayout() {
+		mSowingDate.setText(getActivity().getString(R.string.choose));
+		mSurveyDate.setText(Utils.getFormattedDate(System.currentTimeMillis(), "dd-MMMM-yyyy"));
+		mDiseaseName.setText("");
+		mDiseaseSeverityScore.setText("");
+		mPestName.setText("");
+		mPestInfestationCount.setText("");
+		mCropStageSpinner.setSelection(-1);
+	}
+
 	@Override
 	public void onClick(View v) {
-
+		Calendar calendar = new GregorianCalendar();
 		switch (v.getId()) {
 		case R.id.toggleMap:
 			toggleMapState();
@@ -355,13 +365,13 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 			break;
 		case R.id.dateOfSowing:
 			mCurrentDatePicker = SOWING_DATE_PICKER;
-			new DatePickerDialog(getActivity(), this, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
-					mCalendar.get(Calendar.DAY_OF_MONTH)).show();
+			new DatePickerDialog(getActivity(), this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+					calendar.get(Calendar.DAY_OF_MONTH)).show();
 			break;
 		case R.id.dateOfSurvey:
 			mCurrentDatePicker = SURVEY_DATE_PICKER;
-			new DatePickerDialog(getActivity(), this, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
-					mCalendar.get(Calendar.DAY_OF_MONTH)).show();
+			new DatePickerDialog(getActivity(), this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+					calendar.get(Calendar.DAY_OF_MONTH)).show();
 			break;
 		}
 	}
@@ -370,10 +380,10 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		ContentValues surveyValues = new ContentValues();
 		Calendar sowingDateCalendar = new GregorianCalendar(), surveyDateCalendar = new GregorianCalendar();
 		sowingDateCalendar.set((int) mSowingDate.getTag(R.string.tag_year),
-				(int) mSowingDate.getTag(R.string.tag_month) - 1, (int) mSowingDate.getTag(R.string.tag_day));
+				(int) mSowingDate.getTag(R.string.tag_month) + 1, (int) mSowingDate.getTag(R.string.tag_day));
 		surveyValues.put(SurveyContract.Details.DATE_SOWING, sowingDateCalendar.getTimeInMillis());
 		surveyDateCalendar.set((int) mSurveyDate.getTag(R.string.tag_year),
-				(int) mSurveyDate.getTag(R.string.tag_month) - 1, (int) mSurveyDate.getTag(R.string.tag_day));
+				(int) mSurveyDate.getTag(R.string.tag_month) + 1, (int) mSurveyDate.getTag(R.string.tag_day));
 		surveyValues.put(SurveyContract.Details.DATE_SURVEY, surveyDateCalendar.getTimeInMillis());
 		surveyValues.put(SurveyContract.Details.DISEASE_NAME, mDiseaseName.getText().toString());
 		surveyValues.put(SurveyContract.Details.DISEASE_SEVERITY_SCORE, mDiseaseSeverityScore.getText().toString());
@@ -420,15 +430,14 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		protected void onInsertComplete(int token, Object cookie, Uri uri) {
 			Toast.makeText(mContext, "Survey saved successfully.", Toast.LENGTH_SHORT).show();
 			ContentValues surveyValues = (ContentValues) cookie;
-			Calendar surveyDateCalendar = new GregorianCalendar();
-			surveyDateCalendar.setTimeInMillis(surveyValues.getAsLong(SurveyContract.Details.DATE_SURVEY));
 			mMap.addMarker(new MarkerOptions()
 					.draggable(true)
 					.position(
 							new LatLng(surveyValues.getAsDouble(SurveyContract.Details.LATITUDE), surveyValues
 									.getAsDouble(SurveyContract.Details.LONGITUDE)))
-					.title(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(surveyDateCalendar
-							.getTime())).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_maps_place)));
+					.title(Utils.getFormattedDate(surveyValues.getAsLong(SurveyContract.Details.DATE_SURVEY),
+							"dd-MMMM-yyyy"))
+					.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_maps_place)));
 		}
 	}
 
@@ -436,13 +445,15 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 		switch (mCurrentDatePicker) {
 		case SOWING_DATE_PICKER:
-			mSowingDate.setText(dayOfMonth + "-" + new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
+			mSowingDate.setText(String.format("%02d", dayOfMonth) + "-"
+					+ new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
 			mSowingDate.setTag(R.string.tag_year, year);
 			mSowingDate.setTag(R.string.tag_month, monthOfYear);
 			mSowingDate.setTag(R.string.tag_day, dayOfMonth);
 			break;
 		case SURVEY_DATE_PICKER:
-			mSurveyDate.setText(dayOfMonth + "-" + new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
+			mSurveyDate.setText(String.format("%02d", dayOfMonth) + "-"
+					+ new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
 			mSurveyDate.setTag(R.string.tag_year, year);
 			mSurveyDate.setTag(R.string.tag_month, monthOfYear);
 			mSurveyDate.setTag(R.string.tag_day, dayOfMonth);
@@ -505,7 +516,7 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 			int latitudeIndex = cursor.getColumnIndex(SurveyContract.Details.LATITUDE);
 			int longitudeIndex = cursor.getColumnIndex(SurveyContract.Details.LONGITUDE);
 			int surveyDateIndex = cursor.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
-			cursor.moveToFirst();
+
 			while (cursor.moveToNext()) {
 				mMap.addMarker(new MarkerOptions()
 						.draggable(true)

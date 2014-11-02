@@ -1,6 +1,0 @@
-<resources>
-    <dimen name="flet_hint_text_size">14sp</dimen>
-    <dimen name="flet_hint_text_padding_horizontal">14dp</dimen>
-
-    <dimen name="flet_hint_margin">-8dp</dimen>
-</resources>

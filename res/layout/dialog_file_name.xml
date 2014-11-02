@@ -10,15 +10,19 @@
     android:padding="16dp"
     tools:context="in.ceeq.msdcs.activity.HomeActivity" >
 
-    <in.ceeq.msdcs.utils.FloatLabeledEditText
+    <EditText
         android:id="@+id/fileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="4dp"
-        app:fletInputType="textNoSuggestions"
-        app:fletSingleLine="true"
-        float:fletFloatingHint="Enter a name for export file" />
+        android:hint="@string/export_dialog_hint"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
 
     <LinearLayout
         android:layout_width="match_parent"

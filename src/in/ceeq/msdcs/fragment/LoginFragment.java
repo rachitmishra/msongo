@@ -186,10 +186,6 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		}
 	}
 
-	private boolean isEmailValid(String email) {
-		return email.contains("@");
-	}
-
 	private boolean isPasswordValid(String password) {
 		return password.length() > 4;
 	}

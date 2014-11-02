@@ -35,6 +35,7 @@
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@null"
+            android:contentDescription="@string/content_desc_map_toggle"
             android:padding="4dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_action_maps_map" />
@@ -59,6 +60,7 @@
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@null"
+            android:contentDescription="@string/content_desc_gps_location"
             android:padding="4dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_action_device_gps_fixed" />
@@ -82,6 +84,7 @@
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@null"
+            android:contentDescription="@string/content_desc_zoom_in"
             android:padding="4dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_action_content_add" />
@@ -92,20 +95,27 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@null"
+            android:contentDescription="@string/content_desc_zoom_out"
             android:padding="4dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_action_content_remove" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/formLayout"
+    <ScrollView
+        android:id="@+id/a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/background_card"
-        android:visibility="gone" >
+        android:layout_margin="8dp" >
 
-        <include layout="@layout/base_add_content_layout" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_card"
+            android:visibility="gone" >
+
+            <include layout="@layout/base_add_content_layout" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

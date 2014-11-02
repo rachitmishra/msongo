@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
-        android:text="Export your data"
+        android:text="@string/export_label"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/text_medium"
         android:textSize="24sp" />
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Text"
+            android:text="@string/export_text"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/blue" />
 
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Excel Sheet"
+            android:text="@string/export_csv"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/text_microsoft_excel" />
 
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="PDF"
+            android:text="@string/export_pdf"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/text_adobe_pdf" />
 <!--  

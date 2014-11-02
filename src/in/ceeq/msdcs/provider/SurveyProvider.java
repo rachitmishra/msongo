@@ -31,9 +31,9 @@ public class SurveyProvider extends ContentProvider {
 
 	private static final String SELECT = " SELECT ";
 
-	private static final String AND = " AND ";
+	// private static final String AND = " AND ";
 
-	private static final String OR = " OR ";
+	// private static final String OR = " OR ";
 
 	private static final String FROM = " FROM ";
 
@@ -43,29 +43,29 @@ public class SurveyProvider extends ContentProvider {
 
 	private static final String ON = " ON ";
 
-	private static final String ORDER_BY = " ORDER BY ";
+	// private static final String ORDER_BY = " ORDER BY ";
 
-	private static final String HAVING = " HAVING ";
+	// private static final String HAVING = " HAVING ";
 
 	private static final String COMMA_SEPARATOR = ",";
 
 	private static final String EQUAL_TO = " = ";
 
-	private static final String GREATER_THAN = " > ";
+	// private static final String GREATER_THAN = " > ";
 
-	private static final String LESS_THAN = " < ";
+	// private static final String LESS_THAN = " < ";
 
-	private static final String GREATER_THAN_EQUAL_TO = " >= ";
+	// private static final String GREATER_THAN_EQUAL_TO = " >= ";
 
-	private static final String LESS_THAN_EQUAL_TO = " =< ";
+	// private static final String LESS_THAN_EQUAL_TO = " =< ";
 
-	private static final String IS_NULL = " IS NULL ";
+	// private static final String IS_NULL = " IS NULL ";
 
-	private static final String IS_NOT_NULL = " IS NOT NULL ";
+	// private static final String IS_NOT_NULL = " IS NOT NULL ";
 
-	private static final String NOT_EQUAL_TO = " != ";
+	// private static final String NOT_EQUAL_TO = " != ";
 
-	private static final String LIKE = " LIKE ";
+	// private static final String LIKE = " LIKE ";
 
 	public SurveyProvider() {
 	}

@@ -2,7 +2,6 @@ package in.ceeq.msdcs.fragment;
 
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.service.ExportService;
-import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,6 +37,8 @@ public class ExportFragment extends Fragment implements View.OnClickListener {
 	public static final String EXPORT_FILE_TYPE = "export_file_type";
 
 	// private TextView mSheetLabel;
+
+	private EditText mFileName;
 
 	public static ExportFragment newInstance() {
 		return new ExportFragment();
@@ -77,8 +79,6 @@ public class ExportFragment extends Fragment implements View.OnClickListener {
 		// mSheetLabel.setOnClickListener(this);
 	}
 
-	private FloatLabeledEditText mFileName;
-
 	private AlertDialog mAlertDialog;
 
 	@Override
@@ -113,7 +113,7 @@ public class ExportFragment extends Fragment implements View.OnClickListener {
 	public void showExportDialog() {
 		AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
 		View exportView = getActivity().getLayoutInflater().inflate(R.layout.dialog_file_name, null);
-		mFileName = (FloatLabeledEditText) exportView.findViewById(R.id.fileName);
+		mFileName = (EditText) exportView.findViewById(R.id.fileName);
 		LinearLayout mCancel = (LinearLayout) exportView.findViewById(R.id.cancel);
 		mCancel.setOnClickListener(this);
 		LinearLayout mSave = (LinearLayout) exportView.findViewById(R.id.save);

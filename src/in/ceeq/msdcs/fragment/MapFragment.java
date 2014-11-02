@@ -3,7 +3,6 @@ package in.ceeq.msdcs.fragment;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
-import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import in.ceeq.msdcs.utils.Utils;
 
 import java.text.DateFormatSymbols;
@@ -35,6 +34,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -82,13 +82,13 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private Button mSurveyDate;
 
-	private FloatLabeledEditText mDiseaseName;
+	private EditText mDiseaseName;
 
-	private FloatLabeledEditText mDiseaseSeverityScore;
+	private EditText mDiseaseSeverityScore;
 
-	private FloatLabeledEditText mPestName;
+	private EditText mPestName;
 
-	private FloatLabeledEditText mPestInfestationCount;
+	private EditText mPestInfestationCount;
 
 	private Spinner mCropStageSpinner;
 
@@ -193,14 +193,14 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		mSurveyDate.setTag(R.string.tag_year, calendar.get(Calendar.YEAR));
 		mSurveyDate.setTag(R.string.tag_month, calendar.get(Calendar.MONTH) + 1);
 		mSurveyDate.setTag(R.string.tag_day, calendar.get(Calendar.DAY_OF_MONTH));
-		mDiseaseName = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseName);
-		mDiseaseName.getEditText().setTypeface(typeFace);
-		mDiseaseSeverityScore = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseSeverity);
-		mDiseaseSeverityScore.getEditText().setTypeface(typeFace);
-		mPestName = (FloatLabeledEditText) rootView.findViewById(R.id.pestName);
-		mPestName.getEditText().setTypeface(typeFace);
-		mPestInfestationCount = (FloatLabeledEditText) rootView.findViewById(R.id.pestInfestationCount);
-		mPestInfestationCount.getEditText().setTypeface(typeFace);
+		mDiseaseName = (EditText) rootView.findViewById(R.id.diseaseName);
+		mDiseaseName.setTypeface(typeFace);
+		mDiseaseSeverityScore = (EditText) rootView.findViewById(R.id.diseaseSeverity);
+		mDiseaseSeverityScore.setTypeface(typeFace);
+		mPestName = (EditText) rootView.findViewById(R.id.pestName);
+		mPestName.setTypeface(typeFace);
+		mPestInfestationCount = (EditText) rootView.findViewById(R.id.pestInfestationCount);
+		mPestInfestationCount.setTypeface(typeFace);
 
 		((TextView) rootView.findViewById(R.id.addLabel)).setTypeface(typeFace);
 		((TextView) rootView.findViewById(R.id.dateOfSowingLabel)).setTypeface(typeFace);

@@ -4,7 +4,7 @@
     xmlns:float="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/card_background"
+    android:background="@drawable/background_card"
     android:orientation="vertical"
     tools:context="in.ceeq.msdcs.activity.HomeActivity" >
 
@@ -15,7 +15,7 @@
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="4dp"
-        android:text=""
+        android:text="@string/map_add_content_header"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/blue"
         android:textSize="24sp" />
@@ -85,48 +85,45 @@
                 android:textAllCaps="true"
                 android:textColor="@color/green" />
 
-            <in.ceeq.msdcs.utils.FloatLabeledEditText
+            <EditText
                 android:id="@+id/diseaseName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
-                android:inputType="text"
-                float:fletFloatingHint="Disease Name" >
-            </in.ceeq.msdcs.utils.FloatLabeledEditText>
+                android:hint="@string/map_disease_name"
+                android:inputType="text" >
+            </EditText>
 
-            <in.ceeq.msdcs.utils.FloatLabeledEditText
+            <EditText
                 android:id="@+id/diseaseSeverity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
                 android:hint="@string/map_disease_severity_score"
-                android:inputType="text"
-                float:fletFloatingHint="Disease Severity Score" >
-            </in.ceeq.msdcs.utils.FloatLabeledEditText>
+                android:inputType="text" >
+            </EditText>
 
-            <in.ceeq.msdcs.utils.FloatLabeledEditText
+            <EditText
                 android:id="@+id/pestName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:ems="10"
                 android:hint="@string/map_pest_name"
-                android:inputType="text"
-                float:fletFloatingHint="Pest Name" >
-            </in.ceeq.msdcs.utils.FloatLabeledEditText>
+                android:inputType="text" >
+            </EditText>
 
-            <in.ceeq.msdcs.utils.FloatLabeledEditText
+            <EditText
                 android:id="@+id/pestInfestationCount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:ems="10"
                 android:hint="@string/map_pest_infestation_count"
-                android:inputType="text"
-                float:fletFloatingHint="Pest Infestation Count" >
-            </in.ceeq.msdcs.utils.FloatLabeledEditText>
+                android:inputType="text" >
+            </EditText>
 
             <Spinner
                 android:id="@+id/cropStage"
@@ -140,10 +137,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:divider="@android:drawable/divider_horizontal_bright"
         android:dividerPadding="8dp"
-        android:showDividers="middle"
-        android:baselineAligned="false" >
+        android:showDividers="middle" >
 
         <LinearLayout
             android:id="@+id/cancel"

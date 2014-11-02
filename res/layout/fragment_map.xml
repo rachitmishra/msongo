@@ -105,10 +105,11 @@
         android:id="@+id/formLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_card"
+        android:padding="8dp"
         android:visibility="gone" >
 
         <include layout="@layout/base_add_content_layout" />
+
     </LinearLayout>
 
 </RelativeLayout>

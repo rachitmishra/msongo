@@ -30,825 +30,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0466fae3-de68-4b31-b0c7-e02f1f929003" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/assets/Roboto-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/assets/RobotoCondensed-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_blue.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_green.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/drawable-xhdpi-v4/bubble_mask.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/drawable-xxhdpi-v4/bubble_mask.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_orange.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_purple.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_red.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/drawable-xhdpi-v4/bubble_shadow.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/drawable-xxhdpi-v4/bubble_shadow.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/drawable-xhdpi-v4/bubble_white.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_full_open_on_phone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_ic_googleplayservices.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/libs/crashlytics.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_action_drawer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_device_gps_fixed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_device_gps_fixed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_device_gps_fixed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_device_gps_fixed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_hardware_keyboard_control.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_hardware_keyboard_control.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_hardware_keyboard_control.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_hardware_keyboard_control.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_maps_map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_maps_map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_maps_map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_maps_map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_maps_place.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/ic_plusone_medium_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/ic_plusone_medium_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-tvdpi/ic_plusone_medium_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/ic_plusone_medium_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/ic_plusone_medium_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/ic_plusone_small_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/ic_plusone_small_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-tvdpi/ic_plusone_small_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/ic_plusone_small_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/ic_plusone_small_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/ic_plusone_standard_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/ic_plusone_standard_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-tvdpi/ic_plusone_standard_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/ic_plusone_standard_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/ic_plusone_standard_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/ic_plusone_tall_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/ic_plusone_tall_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-tvdpi/ic_plusone_tall_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/ic_plusone_tall_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/ic_plusone_tall_off_client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/ic_today.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/ic_today.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/ic_today.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/ic_today.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_dark_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_exit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_redo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-hdpi-v4/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-mdpi-v4/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable-xhdpi-v4/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-hdpi/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-mdpi/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable-xhdpi/icon_light_undo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_check_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_check_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_check_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_check_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_default_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_default_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_default_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_default_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_default_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_default_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_default_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_default_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_default_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_default_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_default_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_default_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_default_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_default_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_default_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_default_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_default_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_default_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_default_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_default_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_off_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_off_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_off_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_off_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_off_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_on_disabled_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_on_disabled_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_on_focused_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_on_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_radio_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_radio_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_radio_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_radio_on_pressed_holo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_off_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_off_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_off_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_off_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_off_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_off_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_off_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_off_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_off_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_off_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_off_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_off_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_off_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_off_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_off_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_off_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_off_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_off_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_off_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_off_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_on_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_on_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_on_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_on_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_on_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_on_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_on_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_on_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_on_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_on_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_on_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_on_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_on_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_on_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_on_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_on_normal_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_btn_toggle_on_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_btn_toggle_on_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_btn_toggle_on_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_btn_toggle_on_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_fastscroll_thumb_default_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_fastscroll_thumb_default_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_fastscroll_thumb_default_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_fastscroll_thumb_default_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_fastscroll_thumb_pressed_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_fastscroll_thumb_pressed_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_fastscroll_thumb_pressed_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_fastscroll_thumb_pressed_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_list_activated_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_list_activated_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_list_activated_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_list_activated_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_list_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_list_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_list_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_list_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_list_longpressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_list_longpressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_list_longpressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_list_longpressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_list_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_list_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_list_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_list_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_list_selector_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_list_selector_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_list_selector_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_list_selector_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progress_bg_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progress_bg_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progress_bg_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progress_bg_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progress_primary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progress_primary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progress_primary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progress_primary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progress_secondary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progress_secondary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progress_secondary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progress_secondary_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_spinner_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_spinner_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_spinner_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_spinner_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_spinner_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_spinner_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_spinner_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_spinner_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_spinner_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_spinner_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_spinner_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_spinner_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_spinner_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_spinner_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_spinner_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_spinner_pressed_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_selected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_selected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_selected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_selected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_selected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_selected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_selected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_selected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_selected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_selected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_selected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_selected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_unselected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_unselected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_unselected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_unselected_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_unselected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_unselected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_unselected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_unselected_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_tab_unselected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_tab_unselected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_tab_unselected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_tab_unselected_pressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_text_select_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_text_select_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_text_select_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_text_select_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_text_select_handle_middle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_text_select_handle_middle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_text_select_handle_middle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_text_select_handle_middle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_text_select_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_text_select_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_text_select_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_text_select_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_textfield_activated_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_textfield_activated_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_textfield_activated_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_textfield_activated_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_textfield_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_textfield_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_textfield_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_textfield_default_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_textfield_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_textfield_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_textfield_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_textfield_disabled_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_textfield_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_textfield_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_textfield_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_textfield_disabled_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-hdpi/msdcs_textfield_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-mdpi/msdcs_textfield_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xhdpi/msdcs_textfield_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable-xxhdpi/msdcs_textfield_focused_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/libs/opencsv-3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/libs/pdfjet.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/powered_by_google_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/powered_by_google_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/powered_by_google_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/powered_by_google_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-hdpi/powered_by_google_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-mdpi/powered_by_google_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xhdpi/powered_by_google_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable-xxhdpi/powered_by_google_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/templates.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/BaseColumns.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/utils/BaseListFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/buildConfig/debug/in/ceeq/msdcs/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/buildConfig/test/debug/in/ceeq/msdcs/test/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/ExportFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/service/ExportService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/utils/ExternalStorageNotFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/activity/HomeActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/aidl/android/support/v4/app/INotificationSideChannel.aidl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/LoginFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/MapFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/MsdcsApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/interfaces/OnFragmentInteractionListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/r/debug/com/github/johnpersano/supertoasts/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/r/debug/com/google/maps/android/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/generated/source/r/debug/in/ceeq/msdcs/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/activity/SettingsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/SettingsFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/SurveyContract.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/SurveyDatabaseHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/SurveyProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/TimeLineFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/utils/TrackingCursor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/utils/TrackingCursorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/provider/entity/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/utils/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/activity_home.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/activity_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_ads_attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_iap_style.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/background_card.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_black.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_black.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_gray.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_gray.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_green.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_green.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_orange.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_orange.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_purple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_purple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_red.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_red.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_kitkat_white.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_kitkat_white.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_black.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_black.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_gray.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_gray.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_green.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_green.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_orange.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_orange.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_purple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_purple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_red.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_red.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/background_standard_white.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/background_standard_white.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/base_add_content_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/base_list_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/base_list_row_time_line.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/base_spinner_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/com_crashlytics_export_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable/common_signin_btn_icon_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable/common_signin_btn_icon_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/color/common_signin_btn_text_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable/common_signin_btn_text_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/color/common_signin_btn_text_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/drawable/common_signin_btn_text_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-af/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-am/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ar/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-be/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-bg/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-bn-rBD/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ca/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-cs/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-da/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-de/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-el/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-en-rGB/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-en-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-es/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-es-rUS/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-et-rEE/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-eu-rES/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-fa/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-fi/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-fr/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-fr-rCA/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-gl-rES/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-hi/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-hr/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-hu/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-hy-rAM/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-in/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-is-rIS/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-it/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-iw/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ja/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ka-rGE/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-kk-rKZ/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-km-rKH/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-kn-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ko/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ky-rKG/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-lo-rLA/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-lt/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-lv/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-mk-rMK/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ml-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-mn-rMN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-mr-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ms-rMY/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-my-rMM/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-nb/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ne-rNP/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-nl/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-pl/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-pt/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-pt-rBR/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-pt-rPT/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ro/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ru/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-si-rLK/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-sk/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-sl/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-sr/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-sv/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-sw/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ta-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-te-rIN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-th/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-tl/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-tr/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-uk/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ur-rPK/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-uz-rUZ/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-vi/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-zh-rCN/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-zh-rHK/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-zh-rTW/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-zu/common_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/assets/crashlytics-build.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/crashlytics.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/dialog_file_name.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/dummy_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/dummy_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/fragment_export.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/fragment_login.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/fragment_map.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/fragment_time_line.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/tmp/dex/debug/libraryList.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/lint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/maps_attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_activated_background_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_btn_check_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_btn_default_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_btn_radio_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_btn_toggle_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_edit_text_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_fastscroll_thumb_holo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_item_background_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_list_selector_background_transition_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_list_selector_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_progress_horizontal_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_progress_indeterminate_horizontal_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_spinner_background_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/drawable/msdcs_tab_indicator_holo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/xml/preferences.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/proguard.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/projectmsdcs.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/selector_kitkat_square_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/selector_kitkat_square_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/selector_kitkat_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/selector_kitkat_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/selector_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/selector_undobutton.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_kitkat_square_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_kitkat_square_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_kitkat_square_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_kitkat_square_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_kitkat_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_kitkat_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_kitkat_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_kitkat_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_undobarfocused.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/drawable/shape_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/drawable/shape_undobarselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/layout/spinner_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values-hi/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/superactivitytoast_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/superactivitytoast_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/superactivitytoast_progresscircle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/superactivitytoast_progresscircle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/superactivitytoast_progresshorizontal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/superactivitytoast_progresshorizontal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/supercardtoast.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/supercardtoast.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/supercardtoast_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/supercardtoast_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/supercardtoast_progresscircle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/supercardtoast_progresscircle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/supercardtoast_progresshorizontal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/supercardtoast_progresshorizontal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/layout/supertoast.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/layout/supertoast.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/layout/text_bubble.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/layout/text_bubble.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/themes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libmaputils/unspecified/res/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/ProjectMsdcs/libsupertoasts/unspecified/res/values-v19/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.github.johnpersano/supertoasts/1.3.4/res/values-v19/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.3/res/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/version.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/color/wallet_primary_text_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/color/wallet_secondary_text_holo_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-es/wallet_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectmsdcs/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/com_crashlytics_export_strings.xml" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/res/values/com_crashlytics_export_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectmsdcs/src/main/assets/crashlytics-build.properties" afterPath="$PROJECT_DIR$/projectmsdcs/src/main/assets/crashlytics-build.properties" />
     </list>
     <ignored path="project-msdcs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -877,12 +61,9 @@
       <file leaf-file-name="HomeActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/activity/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-988.0" vertical-offset="798" max-vertical-offset="3363">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3819">
               <caret line="170" column="8" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
-              <folding>
-                <element signature="e#5455#5456#0" expanded="true" />
-                <element signature="e#5492#5493#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -890,12 +71,9 @@
       <file leaf-file-name="MapFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/MapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5269542" vertical-offset="6582" max-vertical-offset="9842">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6973" max-vertical-offset="9842">
               <caret line="428" column="36" selection-start-line="428" selection-start-column="36" selection-end-line="428" selection-end-column="36" />
-              <folding>
-                <element signature="e#13852#13869#0" expanded="true" />
-                <element signature="e#13918#13936#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -906,6 +84,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -1847,6 +1028,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1889,7 +1071,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -2123,41 +1304,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4163424" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.385214" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1572529" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4163424" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.385214" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39948782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39948782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2185,6 +1366,22 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/activity/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
+          <caret line="170" column="8" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/MapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6992" max-vertical-offset="9861">
+          <caret line="428" column="36" selection-start-line="428" selection-start-column="36" selection-end-line="428" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projectmsdcs/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="627">
@@ -2197,7 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2213,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10106383" vertical-offset="0" max-vertical-offset="752">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2240,7 +1435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1653">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2284,7 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2346,12 +1539,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/activity/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-988.0" vertical-offset="798" max-vertical-offset="3363">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3819">
           <caret line="170" column="8" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
-          <folding>
-            <element signature="e#5455#5456#0" expanded="true" />
-            <element signature="e#5492#5493#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2382,7 +1572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5327869" vertical-offset="6" max-vertical-offset="494">
           <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2431,12 +1620,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectmsdcs/src/main/java/in/ceeq/msdcs/fragment/MapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5269542" vertical-offset="6582" max-vertical-offset="9842">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6992" max-vertical-offset="9861">
           <caret line="428" column="36" selection-start-line="428" selection-start-column="36" selection-end-line="428" selection-end-column="36" />
-          <folding>
-            <element signature="e#13852#13869#0" expanded="true" />
-            <element signature="e#13918#13936#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

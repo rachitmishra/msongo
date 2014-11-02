@@ -34,16 +34,23 @@
     <string name="tag_day">tag_day</string>
     <string name="toggle_out">Show Tabs</string>
     <string name="toggle_in">Hide Tabs</string>
-    
-    <!--  Tabs -->
+
+    <!-- Tabs -->
     <string name="map">Map</string>
     <string name="timeline">Timeline</string>
     <string name="export">Export</string>
-    
-    <!--  Preference Keys -->
+
+    <!-- Preference Keys -->
     <string name="key_map_zoom_enabled">map_zoom_enabled</string>
-    <string name="key_map_state__save_enabled">map_state__save_enabled</string>    
-<string name="map_summary">Settings for Map</string>  
-<string name="map_zoom_enable_summary">Show zoom controls</string>  
-<string name="map_state_save_summary">Save last map state</string> 
+    <string name="key_map_state__save_enabled">map_state__save_enabled</string>
+    <string name="map_summary">Settings for Map</string>
+    <string name="map_zoom_enable_summary">Show zoom controls</string>
+    <string name="map_state_save_summary">Save last map state</string>
+    <string name="about">About</string>
+    <string name="about_summary">Save last map state</string>
+    <string name="version">Version 1.0 beta</string>
+    <string name="contact">Contact</string>
+     <string name="contact_summary">Contact us</string>
+    <string name="contact_email">support@ceeq.in</string>
+
 </resources>

@@ -6,10 +6,11 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="20" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -29,7 +30,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+ <activity
+            android:name=".activity.SettingsActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+        
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -38,11 +43,15 @@
             android:value="AIzaSyA2B_KGATQXk9z5jEJJPzLnxMQh8bvU_uc" />
 
         <provider
-            android:name="in.ceeq.msdcs.provider.SurveyProvider"
+            android:name=".provider.SurveyProvider"
             android:authorities="com.ceeq.msdcs.surveyprovider"
             android:enabled="true"
             android:exported="true" >
         </provider>
+
+        <service
+            android:name="in.ceeq.msdcs.service.ExportService">
+        </service>
     </application>
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->

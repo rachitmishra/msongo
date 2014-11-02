@@ -35,9 +35,9 @@
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@null"
-            android:padding="8dp"
+            android:padding="4dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_action_map" />
+            android:src="@drawable/ic_action_maps_map" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,15 +53,48 @@
         android:visibility="visible" >
 
         <ImageButton
-             android:id="@+id/currentLocation"
+            android:id="@+id/currentLocation"
             style="@null"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@null"
-            android:padding="8dp"
+            android:padding="4dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_action_gps" />
+            android:src="@drawable/ic_action_device_gps_fixed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/currentLocationLayout"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/background_card"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/zoomIn"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@null"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_content_add" />
+
+        <ImageButton
+            android:id="@+id/zoomOut"
+            style="@null"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_content_remove" />
     </LinearLayout>
 
     <LinearLayout
@@ -72,7 +105,7 @@
         android:background="@drawable/background_card"
         android:visibility="gone" >
 
-        <include layout="@layout/add_content_base_layout" />
+        <include layout="@layout/base_add_content_layout" />
     </LinearLayout>
 
 </RelativeLayout>

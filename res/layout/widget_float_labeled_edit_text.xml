@@ -17,6 +17,7 @@
         style="@style/EditTextMsdcs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions"
         android:layout_marginTop="@dimen/flet_hint_margin" />
 
 </merge>

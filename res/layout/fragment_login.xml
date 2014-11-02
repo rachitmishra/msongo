@@ -52,42 +52,43 @@
                     android:textColor="@color/text_medium"
                     android:textSize="24sp" />
 
-                <in.ceeq.msdcs.utils.FloatLabeledEditText
+                <EditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_action_social_person"
                     android:ems="10"
+                    android:hint="@string/prompt_name"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:padding="12dp"
-                    android:singleLine="true"
-                    float:fletFloatingHint="@string/prompt_name" >
+                    android:singleLine="true" >
 
                     <requestFocus />
-                </in.ceeq.msdcs.utils.FloatLabeledEditText>
+                </EditText>
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_action_maps_local_post_office"
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:padding="12dp"
                     android:singleLine="true" />
 
-                <in.ceeq.msdcs.utils.FloatLabeledEditText
+                <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_action_hardware_keyboard_control"
+                    android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:padding="12dp"
-                    android:singleLine="true"
-                    float:fletFloatingHint="@string/prompt_password" />
+                    android:singleLine="true" />
 
                 <Button
                     android:id="@+id/email_sign_in_button"

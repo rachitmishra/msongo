@@ -1,15 +1,16 @@
 package in.ceeq.msdcs.fragment;
 
-import hirondelle.date4j.DateTime;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import in.ceeq.msdcs.utils.Utils;
 
+import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.TimeZone;
+import java.util.Locale;
 
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
@@ -26,14 +27,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -53,6 +52,7 @@ import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -66,15 +66,21 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	public static final int SURVEY_DATE_PICKER = 2;
 
+	public static final double INDIA_LATITUDE = 21.0000;
+
+	public static final double INDIA_LONGITUDE = 78.0000;
+
 	private static final int LOADER_ID = 1;
+
+	private static final String MAP_ZOOM_LEVEL = "map_zoom_level";
 
 	private GoogleMap mMap;
 
 	private MapView mMapView;
 
-	private FloatLabeledEditText mSowingDate;
+	private Button mSowingDate;
 
-	private FloatLabeledEditText mSurveyDate;
+	private Button mSurveyDate;
 
 	private FloatLabeledEditText mDiseaseName;
 
@@ -88,9 +94,9 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private LinearLayout mFormLayout;
 
-	private Button mSave;
+	private LinearLayout mSave;
 
-	private Button mCancel;
+	private LinearLayout mCancel;
 
 	private int mCurrentDatePicker;
 
@@ -102,13 +108,19 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private ImageButton mLocationToggle;
 
+	private LinearLayout mZoomLayout;
+
+	private ImageButton mZoomIn;
+
+	private ImageButton mZoomOut;
+
 	private LocationRequest mLocationRequest;
 
 	private LocationClient mLocationClient;
 
 	private Location mCurrentLocation;
 
-	private CameraPosition mCameraPosition;
+	private Calendar mCalendar;
 
 	public static MapFragment newInstance() {
 		return new MapFragment();
@@ -173,10 +185,15 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		mFormLayout = (LinearLayout) rootView.findViewById(R.id.formLayout);
 		mCropStageSpinner = (Spinner) rootView.findViewById(R.id.cropStage);
 
-		mSowingDate = (FloatLabeledEditText) rootView.findViewById(R.id.sowingDate);
-		mSowingDate.getEditText().setTypeface(typeFace);
-		mSurveyDate = (FloatLabeledEditText) rootView.findViewById(R.id.surveyDate);
-		mSurveyDate.getEditText().setTypeface(typeFace);
+		mSowingDate = (Button) rootView.findViewById(R.id.dateOfSowing);
+		mSowingDate.setTypeface(typeFace);
+		mSurveyDate = (Button) rootView.findViewById(R.id.dateOfSurvey);
+		mSurveyDate.setTypeface(typeFace);
+		mCalendar = new GregorianCalendar();
+		mSurveyDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(mCalendar.getTime()));
+		mSurveyDate.setTag(R.string.tag_year, mCalendar.get(Calendar.YEAR));
+		mSurveyDate.setTag(R.string.tag_month, mCalendar.get(Calendar.MONTH) + 1);
+		mSurveyDate.setTag(R.string.tag_day, mCalendar.get(Calendar.DAY_OF_MONTH));
 		mDiseaseName = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseName);
 		mDiseaseName.getEditText().setTypeface(typeFace);
 		mDiseaseSeverityScore = (FloatLabeledEditText) rootView.findViewById(R.id.diseaseSeverity);
@@ -187,27 +204,32 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 		mPestInfestationCount.getEditText().setTypeface(typeFace);
 
 		((TextView) rootView.findViewById(R.id.addLabel)).setTypeface(typeFace);
+		((TextView) rootView.findViewById(R.id.dateOfSowingLabel)).setTypeface(typeFace);
+		((TextView) rootView.findViewById(R.id.dateOfSurveyLabel)).setTypeface(typeFace);
+		((TextView) rootView.findViewById(R.id.saveTextView)).setTypeface(typeFace);
+		((TextView) rootView.findViewById(R.id.cancelTextView)).setTypeface(typeFace);
 		mMapLayout = (LinearLayout) rootView.findViewById(R.id.toggleMapLayout);
 		mMapToggle = (ImageButton) rootView.findViewById(R.id.toggleMap);
 		mLocationLayout = (LinearLayout) rootView.findViewById(R.id.currentLocationLayout);
 		mLocationToggle = (ImageButton) rootView.findViewById(R.id.currentLocation);
+		mZoomLayout = (LinearLayout) rootView.findViewById(R.id.zoomLayout);
+		mZoomIn = (ImageButton) rootView.findViewById(R.id.zoomIn);
+		mZoomOut = (ImageButton) rootView.findViewById(R.id.zoomOut);
+		mSave = (LinearLayout) rootView.findViewById(R.id.save);
+		mCancel = (LinearLayout) rootView.findViewById(R.id.cancel);
 
-		mSave = (Button) rootView.findViewById(R.id.save);
-		mSave.setTypeface(typeFace);
-		mCancel = (Button) rootView.findViewById(R.id.cancel);
-		mCancel.setTypeface(typeFace);
 		mSave.setOnClickListener(this);
 		mCancel.setOnClickListener(this);
 		mSowingDate.setOnClickListener(this);
 		mSurveyDate.setOnClickListener(this);
 		mMapToggle.setOnClickListener(this);
 		mLocationToggle.setOnClickListener(this);
+		mZoomIn.setOnClickListener(this);
+		mZoomOut.setOnClickListener(this);
 	}
 
 	private void setupMap() {
-		if (mCameraPosition != null) {
-			// mMap.animateCamera(new Ca);
-		}
+		mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(INDIA_LATITUDE, INDIA_LONGITUDE), 5.0f));
 		mMap.getUiSettings().setCompassEnabled(true);
 		mMap.getUiSettings().setZoomControlsEnabled(false);
 		mMap.getUiSettings().setMyLocationButtonEnabled(false);
@@ -220,14 +242,44 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	public void onResume() {
 		super.onResume();
 		mMapView.onResume();
+
+		if (Utils.getBooleanPrefs(getActivity(), getActivity().getString(R.string.key_map_zoom_enabled))) {
+			mZoomLayout.setVisibility(View.VISIBLE);
+		}
+
+		if (Utils.getBooleanPrefs(getActivity(), getActivity().getString(R.string.key_map_state__save_enabled))) {
+			restoreMapState();
+		} else {
+			mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(INDIA_LATITUDE, INDIA_LONGITUDE), 5.0f));
+		}
+
 		setupLoader(true);
+	}
+
+	private void restoreMapState() {
+		double lastLatitude = Utils.getFloatPrefs(getActivity(), SurveyContract.Details.LATITUDE);
+		double lastLongitude = Utils.getFloatPrefs(getActivity(), SurveyContract.Details.LONGITUDE);
+		float lastZoom = Utils.getFloatPrefs(getActivity(), MAP_ZOOM_LEVEL);
+
+		if (lastLatitude != 0 && lastLongitude != 0) {
+			mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lastLatitude, lastLongitude), lastZoom));
+		}
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
 		mMapView.onPause();
-		mMap.getCameraPosition();
+		saveMapState();
+	}
+
+	private void saveMapState() {
+		CameraPosition currentCameraPosition = mMap.getCameraPosition();
+		Utils.setFloatPrefs(getActivity(), SurveyContract.Details.LATITUDE,
+				(float) currentCameraPosition.target.latitude);
+		Utils.setFloatPrefs(getActivity(), SurveyContract.Details.LONGITUDE,
+				(float) currentCameraPosition.target.longitude);
+		Utils.setFloatPrefs(getActivity(), MAP_ZOOM_LEVEL, (float) currentCameraPosition.zoom);
 	}
 
 	@Override
@@ -238,7 +290,7 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 			mLocationClient.removeLocationUpdates(this);
 		}
 		mLocationClient.disconnect();
-		mCameraPosition = mMap.getCameraPosition();
+		saveMapState();
 	}
 
 	@Override
@@ -265,129 +317,136 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	@Override
 	public void onClick(View v) {
-		Calendar c = new GregorianCalendar();
 
 		switch (v.getId()) {
-			case R.id.toggleMap:
-				toggleMapState();
-				break;
-			case R.id.currentLocation:
-				setMapToCurrentLocation();
-				break;
-			case R.id.cancel:
-				mFormLayout.setVisibility(View.GONE);
-				mMapLayout.setVisibility(View.VISIBLE);
-				mLocationLayout.setVisibility(View.VISIBLE);
-				((HomeActivity) getActivity()).toggleAppbar(true);
-				Utils.hideKeyboard(getActivity());
-				break;
+		case R.id.toggleMap:
+			toggleMapState();
+			break;
+		case R.id.currentLocation:
+			setMapToCurrentLocation();
+			break;
+		case R.id.zoomIn:
+			mMap.animateCamera(CameraUpdateFactory.zoomIn());
+			break;
+		case R.id.zoomOut:
+			mMap.animateCamera(CameraUpdateFactory.zoomOut());
+			break;
+		case R.id.cancel:
+			mFormLayout.setVisibility(View.GONE);
+			mMapLayout.setVisibility(View.VISIBLE);
+			mLocationLayout.setVisibility(View.VISIBLE);
+			((HomeActivity) getActivity()).toggleAppbar(true);
+			Utils.hideKeyboard(getActivity());
+			break;
 
-			case R.id.save:
-				mFormLayout.setVisibility(View.GONE);
-				mMapLayout.setVisibility(View.VISIBLE);
-				mLocationLayout.setVisibility(View.VISIBLE);
-				((HomeActivity) getActivity()).toggleAppbar(true);
-				Utils.hideKeyboard(getActivity());
-				saveSurveyData();
-				break;
-			case R.id.sowingDate:
-				mCurrentDatePicker = SOWING_DATE_PICKER;
-				new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH),
-						c.get(Calendar.DAY_OF_MONTH)).show();
-				break;
-			case R.id.surveyDate:
-				mCurrentDatePicker = SURVEY_DATE_PICKER;
-				new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH),
-						c.get(Calendar.DAY_OF_MONTH)).show();
-				break;
+		case R.id.save:
 
+			if (!validate()) {
+				Toast.makeText(getActivity(), "Entered values are not correct.", Toast.LENGTH_SHORT).show();
+				return;
+			}
+
+			mFormLayout.setVisibility(View.GONE);
+			mMapLayout.setVisibility(View.VISIBLE);
+			mLocationLayout.setVisibility(View.VISIBLE);
+			((HomeActivity) getActivity()).toggleAppbar(true);
+			Utils.hideKeyboard(getActivity());
+			saveSurveyData();
+			break;
+		case R.id.dateOfSowing:
+			mCurrentDatePicker = SOWING_DATE_PICKER;
+			new DatePickerDialog(getActivity(), this, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
+					mCalendar.get(Calendar.DAY_OF_MONTH)).show();
+			break;
+		case R.id.dateOfSurvey:
+			mCurrentDatePicker = SURVEY_DATE_PICKER;
+			new DatePickerDialog(getActivity(), this, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
+					mCalendar.get(Calendar.DAY_OF_MONTH)).show();
+			break;
 		}
 	}
 
 	private void saveSurveyData() {
 		ContentValues surveyValues = new ContentValues();
-
-		if (!validate()) {
-			Toast.makeText(getActivity(), "Entered values are not correct.", Toast.LENGTH_SHORT).show();
-			return;
-		}
-
-		surveyValues.put(
-				SurveyContract.Details.DATE_SOWING,
-				DateTime.forDateOnly((int) mSowingDate.getTag(R.string.tag_year),
-						(int) mSowingDate.getTag(R.string.tag_month), (int) mSowingDate.getTag(R.string.tag_day))
-						.getMilliseconds(TimeZone.getDefault()));
-
-		DateTime surveyDate = DateTime.forDateOnly((int) mSurveyDate.getTag(R.string.tag_year),
-				(int) mSurveyDate.getTag(R.string.tag_month), (int) mSurveyDate.getTag(R.string.tag_day));
-		surveyValues.put(SurveyContract.Details.DATE_SURVEY, surveyDate.getMilliseconds(TimeZone.getDefault()));
+		Calendar sowingDateCalendar = new GregorianCalendar(), surveyDateCalendar = new GregorianCalendar();
+		sowingDateCalendar.set((int) mSowingDate.getTag(R.string.tag_year),
+				(int) mSowingDate.getTag(R.string.tag_month) - 1, (int) mSowingDate.getTag(R.string.tag_day));
+		surveyValues.put(SurveyContract.Details.DATE_SOWING, sowingDateCalendar.getTimeInMillis());
+		surveyDateCalendar.set((int) mSurveyDate.getTag(R.string.tag_year),
+				(int) mSurveyDate.getTag(R.string.tag_month) - 1, (int) mSurveyDate.getTag(R.string.tag_day));
+		surveyValues.put(SurveyContract.Details.DATE_SURVEY, surveyDateCalendar.getTimeInMillis());
 		surveyValues.put(SurveyContract.Details.DISEASE_NAME, mDiseaseName.getText().toString());
 		surveyValues.put(SurveyContract.Details.DISEASE_SEVERITY_SCORE, mDiseaseSeverityScore.getText().toString());
 		surveyValues.put(SurveyContract.Details.PEST_NAME, mDiseaseName.getText().toString());
-		surveyValues.put(SurveyContract.Details.PEST_INFESTATION_COUNT, mDiseaseSeverityScore.getText().toString());
+		surveyValues.put(SurveyContract.Details.PEST_INFESTATION_COUNT, mPestInfestationCount.getText().toString());
 		surveyValues.put(SurveyContract.Details.CROP_STAGE, mCropStageSpinner.getSelectedItemPosition());
 		double latitude = (double) mFormLayout.getTag(R.string.tag_latitude);
 		double longitude = (double) mFormLayout.getTag(R.string.tag_longitude);
 		surveyValues.put(SurveyContract.Details.LATITUDE, latitude);
 		surveyValues.put(SurveyContract.Details.LONGITUDE, longitude);
 		surveyValues.put(SurveyContract.Surveys.USER_ID, Utils.getCurrentUser(getActivity()).mId + "");
-		mMap.addMarker(new MarkerOptions().draggable(true).position(new LatLng(latitude, longitude))
-				.title(surveyDate.format("DD MM YY")));
-		NewSurveyQuery.newInstance(getActivity().getContentResolver(), getActivity()).startInsert(0, null,
-				SurveyContract.Surveys.CONTENT_URI, surveyValues);
+
+		NewSurveyQuery.newInstance(getActivity().getContentResolver(), getActivity(), mMap).startInsert(0,
+				surveyValues, SurveyContract.Surveys.CONTENT_URI, surveyValues);
 	}
 
 	private boolean validate() {
 		boolean valid = true;
 
-		if (mSowingDate.getText().length() == 0 || TextUtils.isEmpty(mSowingDate.getText().toString())) {
-			valid = false;
-			mSowingDate.setError("Sowing date cannot be empty.");
-		}
-
-		if (mSurveyDate.getText().length() == 0 || TextUtils.isEmpty(mSurveyDate.getText().toString())) {
+		if (mSowingDate.getTag(R.string.tag_year) == null) {
 			valid = false;
 			mSowingDate.setError("Sowing date cannot be empty.");
 		}
 
 		return valid;
-
 	}
 
 	private static class NewSurveyQuery extends AsyncQueryHandler {
 
 		private Context mContext;
+		private GoogleMap mMap;
 
-		public static NewSurveyQuery newInstance(ContentResolver contentResolver, Context context) {
-			return new NewSurveyQuery(contentResolver, context);
+		public static NewSurveyQuery newInstance(ContentResolver contentResolver, Context context, GoogleMap map) {
+			return new NewSurveyQuery(contentResolver, context, map);
 		}
 
-		public NewSurveyQuery(ContentResolver contentResolver, Context context) {
+		public NewSurveyQuery(ContentResolver contentResolver, Context context, GoogleMap map) {
 			super(contentResolver);
 			this.mContext = context;
+			this.mMap = map;
 		}
 
 		@Override
 		protected void onInsertComplete(int token, Object cookie, Uri uri) {
 			Toast.makeText(mContext, "Survey saved successfully.", Toast.LENGTH_SHORT).show();
+			ContentValues surveyValues = (ContentValues) cookie;
+			Calendar surveyDateCalendar = new GregorianCalendar();
+			surveyDateCalendar.setTimeInMillis(surveyValues.getAsLong(SurveyContract.Details.DATE_SURVEY));
+			mMap.addMarker(new MarkerOptions()
+					.draggable(true)
+					.position(
+							new LatLng(surveyValues.getAsDouble(SurveyContract.Details.LATITUDE), surveyValues
+									.getAsDouble(SurveyContract.Details.LONGITUDE)))
+					.title(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(surveyDateCalendar
+							.getTime())).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_maps_place)));
 		}
 	}
 
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 		switch (mCurrentDatePicker) {
-			case SOWING_DATE_PICKER:
-				mSowingDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-				mSowingDate.setTag(R.string.tag_year, year);
-				mSowingDate.setTag(R.string.tag_month, monthOfYear);
-				mSowingDate.setTag(R.string.tag_day, dayOfMonth);
-				break;
-			case SURVEY_DATE_PICKER:
-				mSurveyDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-				mSurveyDate.setTag(R.string.tag_year, year);
-				mSurveyDate.setTag(R.string.tag_month, monthOfYear);
-				mSurveyDate.setTag(R.string.tag_day, dayOfMonth);
-				break;
+		case SOWING_DATE_PICKER:
+			mSowingDate.setText(dayOfMonth + "-" + new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
+			mSowingDate.setTag(R.string.tag_year, year);
+			mSowingDate.setTag(R.string.tag_month, monthOfYear);
+			mSowingDate.setTag(R.string.tag_day, dayOfMonth);
+			break;
+		case SURVEY_DATE_PICKER:
+			mSurveyDate.setText(dayOfMonth + "-" + new DateFormatSymbols().getMonths()[monthOfYear] + "-" + year);
+			mSurveyDate.setTag(R.string.tag_year, year);
+			mSurveyDate.setTag(R.string.tag_month, monthOfYear);
+			mSurveyDate.setTag(R.string.tag_day, dayOfMonth);
+			break;
 		}
 	}
 
@@ -413,17 +472,17 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 
 	private void toggleMapState() {
 		switch (mMap.getMapType()) {
-			case GoogleMap.MAP_TYPE_NORMAL:
-				mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-				break;
-			case GoogleMap.MAP_TYPE_TERRAIN:
-				mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-				break;
-			case GoogleMap.MAP_TYPE_SATELLITE:
-				mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-			case GoogleMap.MAP_TYPE_HYBRID:
-				mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-				break;
+		case GoogleMap.MAP_TYPE_NORMAL:
+			mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+			break;
+		case GoogleMap.MAP_TYPE_TERRAIN:
+			mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+			break;
+		case GoogleMap.MAP_TYPE_SATELLITE:
+			mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+		case GoogleMap.MAP_TYPE_HYBRID:
+			mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			break;
 		}
 	}
 
@@ -443,11 +502,17 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	@Override
 	public void onLoadFinished(Loader<Cursor> arg0, Cursor cursor) {
 		if (cursor != null && cursor.getCount() > 0) {
+			int latitudeIndex = cursor.getColumnIndex(SurveyContract.Details.LATITUDE);
+			int longitudeIndex = cursor.getColumnIndex(SurveyContract.Details.LONGITUDE);
+			int surveyDateIndex = cursor.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
 			cursor.moveToFirst();
 			while (cursor.moveToNext()) {
-				mMap.addMarker(new MarkerOptions().position(new LatLng(cursor.getDouble(cursor
-						.getColumnIndex(SurveyContract.Details.LATITUDE)), cursor.getDouble(cursor
-						.getColumnIndex(SurveyContract.Details.LONGITUDE)))));
+				mMap.addMarker(new MarkerOptions()
+						.draggable(true)
+						.position(new LatLng(cursor.getDouble(latitudeIndex), cursor.getDouble(longitudeIndex)))
+						.title(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(cursor
+								.getLong(surveyDateIndex)))
+						.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_maps_place)));
 			}
 		}
 	}
@@ -465,53 +530,4 @@ public class MapFragment extends Fragment implements OnMapClickListener, OnMarke
 	public void onLoaderReset(Loader<Cursor> arg0) {
 	}
 
-	private class SpinnerAdapter extends BaseAdapter {
-
-		private LayoutInflater mInflater;
-
-		private String[] values;
-
-		public SpinnerAdapter(Context context, String[] values) {
-			mInflater = LayoutInflater.from(context);
-		}
-
-		@Override
-		public int getCount() {
-			return values.length;
-		}
-
-		@Override
-		public Object getItem(int position) {
-			return position;
-		}
-
-		@Override
-		public long getItemId(int position) {
-			return position;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			final ListContent holder;
-			if (convertView == null) {
-				convertView = mInflater.inflate(R.layout.spinner_item, null);
-				holder = new ListContent();
-				holder.name = (TextView) convertView.findViewById(R.id.textView1);
-				convertView.setTag(holder);
-			} else {
-				holder = (ListContent) convertView.getTag();
-			}
-
-			Typeface typeFace = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Light.ttf");
-			holder.name.setTypeface(typeFace);
-			holder.name.setText("" + values[position]);
-			return convertView;
-		}
-	}
-
-	private static class ListContent {
-
-		TextView name;
-
-	}
 }

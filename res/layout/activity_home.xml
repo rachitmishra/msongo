@@ -34,6 +34,7 @@
                 android:padding="14dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_action_drawer" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +60,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Map"
+                android:text="@string/map"
                 android:textAllCaps="true"
                 android:textColor="#454545" />
 
@@ -70,7 +71,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Timeline"
+                android:text="@string/timeline"
                 android:textAllCaps="true"
                 android:textColor="#454545" />
 
@@ -81,20 +82,32 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Export"
+                android:text="@string/export"
                 android:textAllCaps="true"
                 android:textColor="#454545" />
+
+            <ImageButton
+                android:id="@+id/settings"
+                style="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/card_background"
+                android:contentDescription="@string/toggle_in"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_action_action_settings" />
 
             <ImageButton
                 android:id="@+id/toggle_in"
                 style="@null"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@null"
+                android:background="@color/card_background"
                 android:contentDescription="@string/toggle_in"
                 android:padding="14dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_action_drawer" />
+
         </LinearLayout>
     </RelativeLayout>
 

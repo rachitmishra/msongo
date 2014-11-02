@@ -6,24 +6,37 @@ import in.ceeq.msdcs.fragment.LoginFragment;
 import in.ceeq.msdcs.fragment.MapFragment;
 import in.ceeq.msdcs.fragment.TimeLineFragment;
 import in.ceeq.msdcs.utils.Utils;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HomeActivity extends ActionBarActivity implements View.OnClickListener {
+public class HomeActivity extends FragmentActivity implements View.OnClickListener {
+
+	public static final int LOGIN_FRAGMENT = 1;
+
+	public static final int MAP_FRAGMENT = 2;
+
+	public static final int TIMELINE_FRAGMENT_ID = 3;
+
+	public static final int EXPORT_FRAGMENT_ID = 4;
+
+	public int mCurrentFragmentId;
 
 	private FragmentManager mFragmentManager;
 
 	private ImageButton mAppBarToggleOut;
 
 	private ImageButton mAppBarToggleIn;
+
+	private ImageButton mSettingsButton;
 
 	private LinearLayout mAppBar;
 
@@ -45,9 +58,11 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 		mAppBar = (LinearLayout) findViewById(R.id.tab_container);
 		mAppBarToggleOut = (ImageButton) findViewById(R.id.toggle_out);
 		mAppBarToggleIn = (ImageButton) findViewById(R.id.toggle_in);
+		mSettingsButton = (ImageButton) findViewById(R.id.settings);
 
 		mAppBarToggleOut.setOnClickListener(this);
 		mAppBarToggleIn.setOnClickListener(this);
+		mSettingsButton.setOnClickListener(this);
 
 		mMapLabel = (TextView) findViewById(R.id.mapLabel);
 		mMapLabel.setTypeface(typeFace);
@@ -65,9 +80,9 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 	protected void onResume() {
 		super.onResume();
 		if (Utils.getBooleanPrefs(this, Utils.IS_LOGGED_IN)) {
-			replaceFragment(0);
+			replaceFragment(MAP_FRAGMENT);
 		} else {
-			replaceFragment(1);
+			replaceFragment(LOGIN_FRAGMENT);
 		}
 	}
 
@@ -90,21 +105,28 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 		}
 	}
 
-	public void replaceFragment(int id) {
-		switch (id) {
-			case 0:
-				mFragmentManager.beginTransaction().replace(R.id.container, MapFragment.newInstance()).commit();
-				break;
-			case 1:
-				toggleAppbar(false);
-				mFragmentManager.beginTransaction().replace(R.id.container, LoginFragment.newInstance()).commit();
-				break;
-			case 2:
-				mFragmentManager.beginTransaction().replace(R.id.container, TimeLineFragment.newInstance()).commit();
-				break;
-			case 3:
-				mFragmentManager.beginTransaction().replace(R.id.container, ExportFragment.newInstance()).commit();
-				break;
+	public void replaceFragment(final int fragmentId) {
+		switch (fragmentId) {
+		case MAP_FRAGMENT:
+			mCurrentFragmentId = MAP_FRAGMENT;
+			mFragmentManager.beginTransaction().replace(R.id.container, MapFragment.newInstance())
+					.commitAllowingStateLoss();
+			break;
+		case LOGIN_FRAGMENT:
+			toggleAppbar(false);
+			mFragmentManager.beginTransaction().replace(R.id.container, LoginFragment.newInstance())
+					.commitAllowingStateLoss();
+			break;
+		case TIMELINE_FRAGMENT_ID:
+			mCurrentFragmentId = TIMELINE_FRAGMENT_ID;
+			mFragmentManager.beginTransaction().replace(R.id.container, TimeLineFragment.newInstance())
+					.commitAllowingStateLoss();
+			break;
+		case EXPORT_FRAGMENT_ID:
+			mCurrentFragmentId = EXPORT_FRAGMENT_ID;
+			mFragmentManager.beginTransaction().replace(R.id.container, ExportFragment.newInstance())
+					.commitAllowingStateLoss();
+			break;
 		}
 	}
 
@@ -112,23 +134,32 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 	public void onClick(View v) {
 
 		switch (v.getId()) {
-			case R.id.toggle_in:
-				mAppBar.setVisibility(View.GONE);
-				mAppBarToggleOut.setVisibility(View.VISIBLE);
-				break;
-			case R.id.toggle_out:
-				mAppBarToggleOut.setVisibility(View.GONE);
-				mAppBar.setVisibility(View.VISIBLE);
-				break;
-			case R.id.mapLabel:
-				replaceFragment(0);
-				break;
-			case R.id.timeLineLabel:
-				replaceFragment(2);
-				break;
-			case R.id.exportLabel:
-				replaceFragment(3);
-				break;
+		case R.id.toggle_in:
+			mAppBar.setVisibility(View.GONE);
+			mAppBarToggleOut.setVisibility(View.VISIBLE);
+			break;
+		case R.id.toggle_out:
+			mAppBarToggleOut.setVisibility(View.GONE);
+			mAppBar.setVisibility(View.VISIBLE);
+			break;
+		case R.id.settings:
+			startActivity(new Intent(this, SettingsActivity.class));
+			break;
+		case R.id.mapLabel:
+			if (mCurrentFragmentId != MAP_FRAGMENT) {
+				replaceFragment(MAP_FRAGMENT);
+			}
+			break;
+		case R.id.timeLineLabel:
+			if (mCurrentFragmentId != TIMELINE_FRAGMENT_ID) {
+				replaceFragment(TIMELINE_FRAGMENT_ID);
+			}
+			break;
+		case R.id.exportLabel:
+			if (mCurrentFragmentId != EXPORT_FRAGMENT_ID) {
+				replaceFragment(EXPORT_FRAGMENT_ID);
+			}
+			break;
 		}
 	}
 
@@ -142,4 +173,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 		mAppBarToggleOut.setVisibility(View.GONE);
 	}
 
+	public int getCurrentFragmentId() {
+		return this.mCurrentFragmentId;
+	}
 }

@@ -1,12 +1,8 @@
 package in.ceeq.msdcs.provider;
 
-import hirondelle.date4j.DateTime;
 import in.ceeq.msdcs.provider.SurveyContract.Details;
 import in.ceeq.msdcs.provider.SurveyContract.Users;
 import in.ceeq.msdcs.utils.Utils;
-
-import java.util.TimeZone;
-
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -91,16 +87,16 @@ public class SurveyProvider extends ContentProvider {
 
 		final int match = sUriMatcher.match(uri);
 		switch (match) {
-			case SURVEYS_MATCH:
-				return SurveyContract.Surveys.CONTENT_TYPE;
-			case USERS_MATCH:
-				return SurveyContract.Users.CONTENT_TYPE;
-			case DETAILS_MATCH:
-				return SurveyContract.Details.CONTENT_TYPE;
-			case SURVEY_DETAILS_MATCH:
-				return SurveyContract.Details.CONTENT_TYPE;
-			default:
-				throw new IllegalArgumentException("NO FOUND: " + uri);
+		case SURVEYS_MATCH:
+			return SurveyContract.Surveys.CONTENT_TYPE;
+		case USERS_MATCH:
+			return SurveyContract.Users.CONTENT_TYPE;
+		case DETAILS_MATCH:
+			return SurveyContract.Details.CONTENT_TYPE;
+		case SURVEY_DETAILS_MATCH:
+			return SurveyContract.Details.CONTENT_TYPE;
+		default:
+			throw new IllegalArgumentException("NO FOUND: " + uri);
 		}
 	}
 
@@ -115,38 +111,38 @@ public class SurveyProvider extends ContentProvider {
 
 		int uriType = sUriMatcher.match(uri);
 		switch (uriType) {
-			case SURVEY_DETAILS_MATCH:
-				mQuery = new StringBuilder(SELECT);
-				mQuery.append(Utils.getStringFromArray(projection, COMMA_SEPARATOR));
-				mQuery.append(FROM);
-				mQuery.append(SurveyContract.Surveys.PATH);
-				mQuery.append(LEFT_JOIN);
-				mQuery.append(Details.PATH);
-				mQuery.append(ON);
-				mQuery.append(Utils.getJoinColumnName(SurveyContract.Details.PATH, SurveyContract.Details._ID));
-				mQuery.append(EQUAL_TO);
-				mQuery.append(Utils.getJoinColumnName(SurveyContract.Surveys.PATH, SurveyContract.Surveys.DETAILS_ID));
-				mQuery.append(LEFT_JOIN);
-				mQuery.append(Users.PATH);
-				mQuery.append(ON);
-				mQuery.append(Utils.getJoinColumnName(SurveyContract.Users.PATH, SurveyContract.Users._ID));
-				mQuery.append(EQUAL_TO);
-				mQuery.append(Utils.getJoinColumnName(SurveyContract.Surveys.PATH, SurveyContract.Surveys.USER_ID));
+		case SURVEY_DETAILS_MATCH:
+			mQuery = new StringBuilder(SELECT);
+			mQuery.append(Utils.getStringFromArray(projection, COMMA_SEPARATOR));
+			mQuery.append(FROM);
+			mQuery.append(SurveyContract.Surveys.PATH);
+			mQuery.append(LEFT_JOIN);
+			mQuery.append(Details.PATH);
+			mQuery.append(ON);
+			mQuery.append(Utils.getJoinColumnName(SurveyContract.Details.PATH, SurveyContract.Details._ID));
+			mQuery.append(EQUAL_TO);
+			mQuery.append(Utils.getJoinColumnName(SurveyContract.Surveys.PATH, SurveyContract.Surveys.DETAILS_ID));
+			mQuery.append(LEFT_JOIN);
+			mQuery.append(Users.PATH);
+			mQuery.append(ON);
+			mQuery.append(Utils.getJoinColumnName(SurveyContract.Users.PATH, SurveyContract.Users._ID));
+			mQuery.append(EQUAL_TO);
+			mQuery.append(Utils.getJoinColumnName(SurveyContract.Surveys.PATH, SurveyContract.Surveys.USER_ID));
 
-				if (!TextUtils.isEmpty(selection)) {
-					mQuery.append(WHERE);
-					mQuery.append(selection);
-				}
-				cursor = mDatabase.rawQuery(mQuery.toString(), selectionArgs);
-				cursor.setNotificationUri(getContext().getContentResolver(), uri);
-				return cursor;
-			case USERS_MATCH:
-				mQueryBuilder.setTables(SurveyContract.Users.PATH);
-				cursor = mQueryBuilder.query(mDatabase, projection, selection, selectionArgs, sortOrder, null, null);
-				cursor.setNotificationUri(getContext().getContentResolver(), uri);
-				return cursor;
-			default:
-				throw new IllegalArgumentException("NOT FOUND: " + uri);
+			if (!TextUtils.isEmpty(selection)) {
+				mQuery.append(WHERE);
+				mQuery.append(selection);
+			}
+			cursor = mDatabase.rawQuery(mQuery.toString(), selectionArgs);
+			cursor.setNotificationUri(getContext().getContentResolver(), uri);
+			return cursor;
+		case USERS_MATCH:
+			mQueryBuilder.setTables(SurveyContract.Users.PATH);
+			cursor = mQueryBuilder.query(mDatabase, projection, selection, selectionArgs, sortOrder, null, null);
+			cursor.setNotificationUri(getContext().getContentResolver(), uri);
+			return cursor;
+		default:
+			throw new IllegalArgumentException("NOT FOUND: " + uri);
 		}
 	}
 
@@ -158,57 +154,49 @@ public class SurveyProvider extends ContentProvider {
 
 		int uriType = sUriMatcher.match(uri);
 		switch (uriType) {
-			case SURVEYS_MATCH:
+		case SURVEYS_MATCH:
 
-				ContentValues detailValues = new ContentValues();
+			ContentValues detailValues = new ContentValues();
+			detailValues.put(SurveyContract.Details.DATE_SOWING,
+					values.getAsInteger(SurveyContract.Details.DATE_SOWING));
+			detailValues.put(SurveyContract.Details.DATE_SURVEY,
+					values.getAsInteger(SurveyContract.Details.DATE_SURVEY));
+			detailValues.put(SurveyContract.Details.CROP_STAGE, values.getAsString(SurveyContract.Details.CROP_STAGE));
+			detailValues.put(SurveyContract.Details.DISEASE_NAME,
+					values.getAsString(SurveyContract.Details.DISEASE_NAME));
+			detailValues.put(SurveyContract.Details.DISEASE_SEVERITY_SCORE,
+					values.getAsString(SurveyContract.Details.DISEASE_SEVERITY_SCORE));
+			detailValues.put(SurveyContract.Details.PEST_NAME, values.getAsString(SurveyContract.Details.PEST_NAME));
+			detailValues.put(SurveyContract.Details.PEST_INFESTATION_COUNT,
+					values.getAsString(SurveyContract.Details.PEST_INFESTATION_COUNT));
+			detailValues.put(SurveyContract.Details.LATITUDE, values.getAsDouble(SurveyContract.Details.LATITUDE));
+			detailValues.put(SurveyContract.Details.LONGITUDE, values.getAsDouble(SurveyContract.Details.LONGITUDE));
+			detailValues.put(SurveyContract.Surveys.CREATED_ON, System.currentTimeMillis());
+			detailValues.put(SurveyContract.Surveys.CREATED_BY, values.getAsString(SurveyContract.Surveys.USER_ID));
 
-				detailValues.put(SurveyContract.Details.DATE_SOWING,
-						values.getAsInteger(SurveyContract.Details.DATE_SOWING));
-				detailValues.put(SurveyContract.Details.DATE_SURVEY,
-						values.getAsInteger(SurveyContract.Details.DATE_SURVEY));
-				detailValues.put(SurveyContract.Details.CROP_STAGE,
-						values.getAsString(SurveyContract.Details.CROP_STAGE));
-				detailValues.put(SurveyContract.Details.DISEASE_NAME,
-						values.getAsString(SurveyContract.Details.DISEASE_NAME));
-				detailValues.put(SurveyContract.Details.DISEASE_SEVERITY_SCORE,
-						values.getAsString(SurveyContract.Details.DISEASE_SEVERITY_SCORE));
-				detailValues
-						.put(SurveyContract.Details.PEST_NAME, values.getAsString(SurveyContract.Details.PEST_NAME));
-				detailValues.put(SurveyContract.Details.PEST_INFESTATION_COUNT,
-						values.getAsString(SurveyContract.Details.PEST_INFESTATION_COUNT));
-				detailValues.put(SurveyContract.Details.LATITUDE, values.getAsDouble(SurveyContract.Details.LATITUDE));
-				detailValues
-						.put(SurveyContract.Details.LONGITUDE, values.getAsDouble(SurveyContract.Details.LONGITUDE));
-				detailValues.put(SurveyContract.Surveys.CREATED_ON, DateTime.now(TimeZone.getDefault())
-						.getMilliseconds(TimeZone.getDefault()));
-				detailValues.put(SurveyContract.Surveys.CREATED_BY, values.getAsString(SurveyContract.Surveys.USER_ID));
+			long detailRowId = mDatabase.insert(SurveyContract.Details.PATH, null, detailValues);
 
-				long detailRowId = mDatabase.insert(SurveyContract.Details.PATH, null, detailValues);
+			ContentValues surveyContentValues = new ContentValues();
 
-				ContentValues surveyContentValues = new ContentValues();
+			surveyContentValues.put(SurveyContract.Surveys.USER_ID, values.getAsLong(SurveyContract.Surveys.USER_ID));
+			surveyContentValues.put(SurveyContract.Surveys.DETAILS_ID, detailRowId);
+			surveyContentValues.put(SurveyContract.Surveys.CREATED_ON, System.currentTimeMillis());
+			surveyContentValues.put(SurveyContract.Surveys.CREATED_BY, values.getAsString(SurveyContract.Users._ID));
 
-				surveyContentValues.put(SurveyContract.Surveys.USER_ID,
-						values.getAsLong(SurveyContract.Surveys.USER_ID));
-				surveyContentValues.put(SurveyContract.Surveys.DETAILS_ID, detailRowId);
-				surveyContentValues.put(SurveyContract.Surveys.CREATED_ON, DateTime.now(TimeZone.getDefault())
-						.getMilliseconds(TimeZone.getDefault()));
-				surveyContentValues
-						.put(SurveyContract.Surveys.CREATED_BY, values.getAsString(SurveyContract.Users._ID));
+			long surveyRowId = mDatabase.insert(SurveyContract.Surveys.PATH, null, surveyContentValues);
 
-				long surveyRowId = mDatabase.insert(SurveyContract.Surveys.PATH, null, surveyContentValues);
+			if (surveyRowId > 0) {
+				result = ContentUris.withAppendedId(SurveyContract.Surveys.CONTENT_URI, surveyRowId);
+				getContext().getContentResolver().notifyChange(result, null);
+			}
+			break;
+		case USERS_MATCH:
+			long userRowId = mDatabase.insert(SurveyContract.Users.PATH, null, values);
 
-				if (surveyRowId > 0) {
-					result = ContentUris.withAppendedId(SurveyContract.Surveys.CONTENT_URI, surveyRowId);
-					getContext().getContentResolver().notifyChange(result, null);
-				}
-				break;
-			case USERS_MATCH:
-				long userRowId = mDatabase.insert(SurveyContract.Users.PATH, null, values);
-
-				if (userRowId > 0) {
-					result = ContentUris.withAppendedId(SurveyContract.Users.CONTENT_URI, userRowId);
-					getContext().getContentResolver().notifyChange(result, null);
-				}
+			if (userRowId > 0) {
+				result = ContentUris.withAppendedId(SurveyContract.Users.CONTENT_URI, userRowId);
+				getContext().getContentResolver().notifyChange(result, null);
+			}
 		}
 
 		return result;

@@ -67,6 +67,8 @@ public class BaseColumns {
 
 	public static final String CREATE_TABLE = "create table ";
 
+	public static final String COMMA = ", ";
+
 	private static final String DROP_TABLE = "drop table if exists ";
 
 	protected static final String INTEGER = " integer ";
@@ -76,8 +78,6 @@ public class BaseColumns {
 	protected static final String TEXT = " text ";
 
 	protected static final String NOT_NULL = "not null ";
-
-	protected static final String COMMA = ", ";
 
 	protected static final String PRIMARY_KEY = "primary key ";
 

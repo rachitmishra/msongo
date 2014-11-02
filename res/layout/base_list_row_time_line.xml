@@ -3,19 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:padding="16dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
     tools:context="in.ceeq.msdcs.fragment.TimeLineFragment" >
 
     <TextView
-        android:id="@+id/dateView"
+        android:id="@+id/userView"
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:background="@color/blue"
         android:gravity="center"
         android:padding="8dp"
-        android:text="28\nOct"
-        android:textColor="@android:color/white" />
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +55,6 @@
                     android:textAllCaps="true"
                     android:textColor="@color/blue"
                     android:textSize="12sp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -75,9 +79,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/blue"
                     android:textSize="12sp" />
-
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +103,6 @@
                 android:text="Flowering"
                 android:textColor="@color/blue"
                 android:textSize="12sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -131,7 +132,6 @@
                     android:textAllCaps="true"
                     android:textColor="@color/blue"
                     android:textSize="12sp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -156,10 +156,8 @@
                     android:textAllCaps="true"
                     android:textColor="@color/blue"
                     android:textSize="12sp" />
-
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

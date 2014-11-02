@@ -88,17 +88,26 @@ public final class SurveyContract {
 		 */
 		public static final String EMAIL = "email";
 
+		/**
+		 * Color <br/>
+		 * <b>type</b> int <br/>
+		 * <b>default</b> NOT NULL
+		 */
+		public static final String COLOR = "color";
+
 		public static final String CONTENT_ITEM_TYPE = Utils.getTableContentItemType(PATH);
 
 		public static final String CONTENT_TYPE = Utils.getTableContentType(PATH);
 
 		public static final Uri CONTENT_URI = Utils.getTableContentUri(PATH);
 
-		public static final String[] DEFAULT_PROJECTION = { _ID, NAME, EMAIL };
+		public static final String[] DEFAULT_PROJECTION = { _ID, NAME, EMAIL, COLOR };
 
 		public static String create() {
-			return create(PATH, new StringBuilder(NAME).append(TEXT).append(NOT_NULL).append(COMMA).append(PASSWORD)
-					.append(TEXT).append(NOT_NULL).append(COMMA).append(EMAIL).append(TEXT).append(NOT_NULL).toString());
+			return create(PATH,
+					new StringBuilder(NAME).append(TEXT).append(NOT_NULL).append(COMMA).append(EMAIL).append(TEXT)
+							.append(NOT_NULL).append(COMMA).append(COLOR).append(TEXT).append(COMMA).append(PASSWORD)
+							.append(TEXT).toString());
 		}
 
 		public static String drop() {
@@ -144,7 +153,7 @@ public final class SurveyContract {
 		 * <b>type</b> String <br/>
 		 * <b>default</b> NULL
 		 */
-		public static final String DISEASE_SEVERITY_SCORE = "disease_score";
+		public static final String DISEASE_SEVERITY_SCORE = "disease_severity_score";
 
 		/**
 		 * Pest Name <br/>

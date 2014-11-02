@@ -1,12 +1,12 @@
 package in.ceeq.msdcs.fragment;
 
-import hirondelle.date4j.DateTime;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.utils.BaseListFragment;
+import in.ceeq.msdcs.utils.Utils;
 
+import java.text.SimpleDateFormat;
 import java.util.Locale;
-import java.util.TimeZone;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -124,6 +124,15 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 	public void onLoaderReset(Loader<Cursor> arg0) {
 	}
 
+	public static class ViewHolder {
+		public TextView userView;
+		public TextView sowingDate;
+		public TextView surveyDate;
+		public TextView cropStage;
+		public TextView diseaseSeverity;
+		public TextView pestCount;
+	}
+
 	private class TimeLineAdapter extends CursorAdapter {
 
 		public TimeLineAdapter(Context context, Cursor c, boolean autoRequery) {
@@ -132,40 +141,36 @@ public class TimeLineFragment extends BaseListFragment implements LoaderCallback
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
+			ViewHolder holder = new ViewHolder();
 			if (convertView == null) {
-				convertView = getActivity().getLayoutInflater().inflate(R.layout.list_row_time_line, parent, false);
+				convertView = getActivity().getLayoutInflater()
+						.inflate(R.layout.base_list_row_time_line, parent, false);
+				holder.userView = (TextView) convertView.findViewById(R.id.userView);
+				holder.sowingDate = (TextView) convertView.findViewById(R.id.sowing_date);
+				holder.surveyDate = (TextView) convertView.findViewById(R.id.survey_date);
+				holder.cropStage = (TextView) convertView.findViewById(R.id.crop_stage);
+				holder.diseaseSeverity = (TextView) convertView.findViewById(R.id.disease_severity_score);
+				holder.pestCount = (TextView) convertView.findViewById(R.id.pest_count);
+				convertView.setTag(holder);
+			} else {
+				holder = (ViewHolder) convertView.getTag();
 			}
 
 			Cursor item = (Cursor) getItem(position);
 
-			TextView dateView = (TextView) convertView.findViewById(R.id.dateView);
-			TextView sowingDate = (TextView) convertView.findViewById(R.id.sowing_date);
-			TextView surveyDate = (TextView) convertView.findViewById(R.id.survey_date);
-			TextView cropStage = (TextView) convertView.findViewById(R.id.crop_stage);
-			TextView diseaseSeverity = (TextView) convertView.findViewById(R.id.disease_severity_score);
-			TextView pestCount = (TextView) convertView.findViewById(R.id.pest_count);
-
-			DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SOWING), TimeZone.getDefault()).format(
-					"DD-MM-YYYY");
-			DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY), TimeZone.getDefault()).format(
-					"DD-MM-YYYY");
-
-			sowingDate.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SOWING),
-					TimeZone.getDefault()).format("DD MM YYYY"));
-			surveyDate.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY),
-					TimeZone.getDefault()).format("DD MM YYYY"));
-			dateView.setText(DateTime.forInstant(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY),
-					TimeZone.getDefault()).format("DD MMM", Locale.getDefault()));
-			cropStage.setText(getCropStageString(item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));
-			diseaseSeverity.setText(item.getString(item.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE)));
-			pestCount.setText(item.getString(item.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT)));
+			holder.sowingDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(item
+					.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SOWING))));
+			holder.surveyDate.setText(new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault()).format(item
+					.getLong(item.getColumnIndex(SurveyContract.Details.DATE_SURVEY))));
+			holder.userView.setText(item.getString(item.getColumnIndex(SurveyContract.Users.NAME)).substring(0, 1));
+			holder.cropStage.setText(Utils.getCropStageString(getActivity(),
+					item.getInt(item.getColumnIndex(SurveyContract.Details.CROP_STAGE))));
+			holder.diseaseSeverity.setText(item.getString(item
+					.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE)));
+			holder.pestCount
+					.setText(item.getString(item.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT)));
 
 			return convertView;
-		}
-
-		public String getCropStageString(int index) {
-			String[] cropStages = getResources().getStringArray(R.array.crop_stages);
-			return cropStages[index];
 		}
 
 		@Override

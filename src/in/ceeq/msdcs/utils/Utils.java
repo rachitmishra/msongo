@@ -1,18 +1,30 @@
 package in.ceeq.msdcs.utils;
 
-import hirondelle.date4j.DateTime;
+import in.ceeq.msdcs.R;
+import in.ceeq.msdcs.fragment.ExportFragment;
+import in.ceeq.msdcs.provider.BaseColumns;
 import in.ceeq.msdcs.provider.SurveyContract;
 import in.ceeq.msdcs.provider.entity.User;
 
-import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.TimeZone;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.database.Cursor;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -21,12 +33,307 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
+import au.com.bytecode.opencsv.CSVWriter;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.pdfjet.A4;
+import com.pdfjet.Align;
+import com.pdfjet.Cell;
+import com.pdfjet.Color;
+import com.pdfjet.CoreFont;
+import com.pdfjet.Font;
+import com.pdfjet.PDF;
+import com.pdfjet.Page;
+import com.pdfjet.Table;
+import com.pdfjet.TextLine;
 
 public class Utils {
 
+	/**
+	 * Get formatted column name.
+	 * 
+	 * @param columnName
+	 * @return formatted column name
+	 */
+	public static final String getColumnName(String columnName) {
+		return columnName.replace("_", " ").toUpperCase(Locale.getDefault());
+	}
+
+	/**
+	 * Get crop stage text.
+	 * 
+	 * @param context
+	 * @param index
+	 *            spinner index
+	 * @return crop stage
+	 */
+	public static String getCropStageString(Context context, int index) {
+		String[] cropStages = context.getResources().getStringArray(R.array.crop_stages);
+		return cropStages[index];
+	}
+
+	/**
+	 * Export data to a file.
+	 * 
+	 * @param fileType
+	 *            type of file (i.e.. PDF, EXCEL etc.)
+	 * @param context
+	 *            context
+	 * @param fileName
+	 *            name of file
+	 * @param data
+	 *            data to be exported
+	 */
+	public static void export(int fileType, Context context, String fileName, Cursor data) {
+		switch (fileType) {
+		case ExportFragment.EXPORT_PDF:
+			exportPdf(context, fileName, data);
+			break;
+		case ExportFragment.EXPORT_EXCEL:
+			exportCsv(context, fileName, data);
+			break;
+		case ExportFragment.EXPORT_TEXT:
+			exportText(context, fileName, data);
+			break;
+		default:
+			break;
+		}
+	}
+
+	private static String[] getDefaultExportHeaderNames() {
+		return new String[] { SurveyContract.Details._ID, SurveyContract.Details.DATE_SOWING,
+				SurveyContract.Details.DATE_SURVEY, SurveyContract.Details.LATITUDE, SurveyContract.Details.LONGITUDE,
+				SurveyContract.Details.CROP_STAGE, SurveyContract.Details.DISEASE_NAME,
+				SurveyContract.Details.DISEASE_SEVERITY_SCORE, SurveyContract.Details.PEST_NAME,
+				SurveyContract.Details.PEST_INFESTATION_COUNT };
+	}
+
+	private static void exportPdf(Context context, String fileName, Cursor data) {
+		try {
+			File file = createFile(ExportFragment.EXPORT_PDF, APP_PATH, fileName, context);
+			PDF pdf = new PDF(new FileOutputStream(file));
+			Page page = new Page(pdf, A4.PORTRAIT);
+
+			Font titleFont = new Font(pdf, CoreFont.COURIER_BOLD);
+			titleFont.setSize(16.0f);
+			Font textFont = new Font(pdf, CoreFont.HELVETICA);
+			textFont.setSize(10.0f);
+			TextLine title = new TextLine(titleFont, SurveyContract.Surveys.PATH.toUpperCase(Locale.getDefault()));
+			title.setFont(titleFont);
+			title.setColor(Color.black);
+			title.setPosition(page.getWidth() / 2 - title.getWidth() / 2, 40f);
+			title.drawOn(page);
+
+			Table table = new Table();
+			List<List<Cell>> tableData = new ArrayList<List<Cell>>();
+
+			List<Cell> headerRow = new ArrayList<Cell>();
+			titleFont.setSize(12.0f);
+			for (String columnName : getDefaultExportHeaderNames()) {
+				headerRow.add(new Cell(titleFont, getColumnName(columnName)));
+			}
+
+			for (Cell cell : headerRow) {
+				cell.setTextAlignment(Align.CENTER);
+				cell.setTopPadding(6.0f);
+				cell.setRightPadding(6.0f);
+				cell.setLeftPadding(6.0f);
+				cell.setBottomPadding(6.0f);
+			}
+
+			tableData.add(headerRow);
+
+			data.moveToFirst();
+			int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
+			int dateSowingIndex = data.getColumnIndex(SurveyContract.Details.DATE_SOWING);
+			int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
+			int latitudeIndex = data.getColumnIndex(SurveyContract.Details.LATITUDE);
+			int longitudeIndex = data.getColumnIndex(SurveyContract.Details.LONGITUDE);
+			int cropStageIndex = data.getColumnIndex(SurveyContract.Details.CROP_STAGE);
+			int diseaseNameIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_NAME);
+			int diseaseSeverityIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE);
+			int pestNameIndex = data.getColumnIndex(SurveyContract.Details.PEST_NAME);
+			int pestInfestationIndex = data.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT);
+
+			Calendar calendar = new GregorianCalendar();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+
+			while (data.moveToNext()) {
+				String id = data.getInt(idIndex) + "";
+				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
+				String dateOfSowing = dateFormat.format(calendar.getTimeInMillis());
+				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
+				String dateOfSurvey = dateFormat.format(calendar.getTimeInMillis());
+				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
+				String latitude = decimalFormat.format(data.getDouble(latitudeIndex));
+				String longitude = decimalFormat.format(data.getDouble(longitudeIndex));
+				String cropStage = getCropStageString(context, data.getInt(cropStageIndex));
+				String diseaseName = data.getString(diseaseNameIndex);
+				String diseaseSeverityScore = data.getString(diseaseSeverityIndex);
+				String pestName = data.getString(pestNameIndex);
+				String pestCount = data.getString(pestInfestationIndex);
+
+				List<Cell> dataRow = new ArrayList<Cell>();
+
+				dataRow.add(new Cell(textFont, id));
+				dataRow.add(new Cell(textFont, dateOfSowing));
+				dataRow.add(new Cell(textFont, dateOfSurvey));
+				dataRow.add(new Cell(textFont, latitude));
+				dataRow.add(new Cell(textFont, longitude));
+				dataRow.add(new Cell(textFont, cropStage));
+				dataRow.add(new Cell(textFont, diseaseName));
+				dataRow.add(new Cell(textFont, diseaseSeverityScore));
+				dataRow.add(new Cell(textFont, pestName));
+				dataRow.add(new Cell(textFont, pestCount));
+
+				for (Cell cell : dataRow) {
+					cell.setTextAlignment(Align.CENTER);
+					cell.setFont(textFont);
+					cell.setPenColor(Color.black);
+				}
+				tableData.add(dataRow);
+			}
+
+			table.setData(tableData, Table.DATA_HAS_1_HEADER_ROWS);
+			table.wrapAroundCellText();
+			table.autoAdjustColumnWidths();
+
+			int numOfPages = table.getNumberOfPages(page);
+			int currentPage = 0;
+			while (true) {
+				TextLine pageNumber = new TextLine(textFont, ++currentPage + " of " + numOfPages);
+				pageNumber.setPosition(pageNumber.getWidth() + 30.0f, page.getHeight() - 20.0f);
+				pageNumber.drawOn(page);
+
+				table.setLocation(page.getWidth() / 2 - table.getWidth() / 2, 60f);
+				table.drawOn(page);
+				if (!table.hasMoreData()) {
+					table.resetRenderedPagesCount();
+					break;
+				}
+				page = new Page(pdf, A4.PORTRAIT);
+			}
+
+			pdf.flush();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			data.close();
+		}
+
+	}
+
+	private static void exportCsv(Context context, String fileName, Cursor data) {
+		data.moveToFirst();
+		int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
+		int dateSowingIndex = data.getColumnIndex(SurveyContract.Details.DATE_SOWING);
+		int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
+		int latitudeIndex = data.getColumnIndex(SurveyContract.Details.LATITUDE);
+		int longitudeIndex = data.getColumnIndex(SurveyContract.Details.LONGITUDE);
+		int cropStageIndex = data.getColumnIndex(SurveyContract.Details.CROP_STAGE);
+		int diseaseNameIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_NAME);
+		int diseaseSeverityIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE);
+		int pestNameIndex = data.getColumnIndex(SurveyContract.Details.PEST_NAME);
+		int pestInfestationIndex = data.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT);
+
+		try {
+			File file = createFile(ExportFragment.EXPORT_EXCEL, APP_PATH, fileName, context);
+			CSVWriter csvWrite = new CSVWriter(new FileWriter(file));
+			StringBuilder exportHeaderBuilder = new StringBuilder();
+			for (String columnName : getDefaultExportHeaderNames()) {
+				exportHeaderBuilder.append(getColumnName(columnName)).append(BaseColumns.COMMA.trim());
+			}
+
+			csvWrite.writeNext(exportHeaderBuilder.substring(0, exportHeaderBuilder.length() - 1).split(","));
+			Calendar calendar = new GregorianCalendar();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+
+			while (data.moveToNext()) {
+				String id = data.getInt(idIndex) + "";
+				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
+				String dateOfSowing = dateFormat.format(calendar.getTimeInMillis());
+				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
+				String dateOfSurvey = dateFormat.format(calendar.getTimeInMillis());
+				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
+				String latitude = decimalFormat.format(data.getDouble(latitudeIndex));
+				String longitude = decimalFormat.format(data.getDouble(longitudeIndex));
+				String cropStage = getCropStageString(context, data.getInt(cropStageIndex));
+				String diseaseName = data.getString(diseaseNameIndex);
+				String diseaseSeverityScore = data.getString(diseaseSeverityIndex);
+				String pestName = data.getString(pestNameIndex);
+				String pestCount = data.getString(pestInfestationIndex);
+				csvWrite.writeNext(new String[] { id, dateOfSowing, dateOfSurvey, latitude, longitude, cropStage,
+						diseaseName, diseaseSeverityScore, pestName, pestCount });
+			}
+			csvWrite.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			data.close();
+		}
+	}
+
+	private static void exportText(Context context, String fileName, Cursor data) {
+		data.moveToFirst();
+		int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
+		int dateSowingIndex = data.getColumnIndex(SurveyContract.Details.DATE_SOWING);
+		int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
+		int latitudeIndex = data.getColumnIndex(SurveyContract.Details.LATITUDE);
+		int longitudeIndex = data.getColumnIndex(SurveyContract.Details.LONGITUDE);
+		int cropStageIndex = data.getColumnIndex(SurveyContract.Details.CROP_STAGE);
+		int diseaseNameIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_NAME);
+		int diseaseSeverityIndex = data.getColumnIndex(SurveyContract.Details.DISEASE_SEVERITY_SCORE);
+		int pestNameIndex = data.getColumnIndex(SurveyContract.Details.PEST_NAME);
+		int pestInfestationIndex = data.getColumnIndex(SurveyContract.Details.PEST_INFESTATION_COUNT);
+
+		try {
+			File file = createFile(ExportFragment.EXPORT_TEXT, APP_PATH, fileName, context);
+			FileWriter writer = new FileWriter(file, true);
+			StringBuilder exportHeaderBuilder = new StringBuilder();
+			for (String columnName : getDefaultExportHeaderNames()) {
+				exportHeaderBuilder.append(getColumnName(columnName)).append(BaseColumns.COMMA);
+			}
+			writer.append(exportHeaderBuilder.substring(0, exportHeaderBuilder.length() - 1) + "\n\n");
+			writer.flush();
+			Calendar calendar = new GregorianCalendar();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+
+			while (data.moveToNext()) {
+				StringBuilder exportDataBuilder = new StringBuilder();
+				exportDataBuilder.append(data.getInt(idIndex) + "").append(BaseColumns.COMMA);
+				calendar.setTimeInMillis(data.getLong(dateSowingIndex));
+				exportDataBuilder.append(dateFormat.format(calendar.getTimeInMillis())).append(BaseColumns.COMMA);
+				calendar.setTimeInMillis(data.getLong(dateSurveyIndex));
+				exportDataBuilder.append(dateFormat.format(calendar.getTimeInMillis())).append(BaseColumns.COMMA);
+				DecimalFormat decimalFormat = new DecimalFormat("##.0000");
+				exportDataBuilder.append(decimalFormat.format(data.getDouble(latitudeIndex))).append(BaseColumns.COMMA);
+				exportDataBuilder.append(decimalFormat.format(data.getDouble(longitudeIndex)))
+						.append(BaseColumns.COMMA);
+				exportDataBuilder.append(getCropStageString(context, data.getInt(cropStageIndex))).append(
+						BaseColumns.COMMA);
+				exportDataBuilder.append(data.getString(diseaseNameIndex)).append(BaseColumns.COMMA);
+				exportDataBuilder.append(data.getString(diseaseSeverityIndex)).append(BaseColumns.COMMA);
+				exportDataBuilder.append(data.getString(pestNameIndex)).append(BaseColumns.COMMA);
+				exportDataBuilder.append(data.getString(pestInfestationIndex)).append(BaseColumns.COMMA);
+				writer.append(exportDataBuilder.toString() + "\n");
+				writer.flush();
+			}
+			writer.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			data.close();
+		}
+	}
+
+	/**
+	 * Hide keyboard.
+	 * 
+	 * @param activity
+	 */
 	public static void hideKeyboard(Activity activity) {
 		try {
 
@@ -140,21 +447,21 @@ public class Utils {
 	public static boolean enabled(int featureType, Context context) {
 		boolean data = false;
 		switch (featureType) {
-			case GPS:
-				data = isGpsEnabled(context);
-				break;
-			case INTERNET:
-				data = isInternetEnabled(context);
-				break;
-			case PLAY_SERVICES:
-				data = isPlayServiceInstalled(context);
-				break;
-			case EXTERNAL_STORAGE:
-				data = isExternalStorageEnabled(context);
-				break;
-			default:
-				data = false;
-				break;
+		case GPS:
+			data = isGpsEnabled(context);
+			break;
+		case INTERNET:
+			data = isInternetEnabled(context);
+			break;
+		case PLAY_SERVICES:
+			data = isPlayServiceInstalled(context);
+			break;
+		case EXTERNAL_STORAGE:
+			data = isExternalStorageEnabled(context);
+			break;
+		default:
+			data = false;
+			break;
 
 		}
 		return data;
@@ -252,6 +559,14 @@ public class Utils {
 		PreferenceManager.getDefaultSharedPreferences(ctx).edit().putLong(key, value).commit();
 	}
 
+	public static float getFloatPrefs(Context ctx, String key) {
+		return PreferenceManager.getDefaultSharedPreferences(ctx).getFloat(key, 0);
+	}
+
+	public static void setFloatPrefs(Context ctx, String key, float value) {
+		PreferenceManager.getDefaultSharedPreferences(ctx).edit().putFloat(key, value).commit();
+	}
+
 	public static void clearPrefs(Context ctx) {
 		PreferenceManager.getDefaultSharedPreferences(ctx).edit().clear().commit();
 	}
@@ -262,7 +577,7 @@ public class Utils {
 
 	public static final String APP_PATH = "/msdcs";
 
-	public static File createFile(String path, String type, Context ctx) throws IOException,
+	public static File createFile(int type, String path, String name, Context ctx) throws IOException,
 			ExternalStorageNotFoundException {
 		if (!enabled(EXTERNAL_STORAGE, ctx)) {
 			throw new ExternalStorageNotFoundException();
@@ -274,29 +589,43 @@ public class Utils {
 			storageLocation.mkdirs();
 		}
 
-		File file = new File(storageLocation, getFileName(type));
+		String extension = ".txt";
+
+		switch (type) {
+		case ExportFragment.EXPORT_EXCEL:
+			extension = ".csv";
+			break;
+		case ExportFragment.EXPORT_PDF:
+			extension = ".pdf";
+			break;
+		default:
+			break;
+		}
+		File file = new File(storageLocation, name + extension);
 		file.createNewFile();
 		return file;
 	}
 
-	public static String writeFile(String text, String type, Context ctx) throws IOException,
-			ExternalStorageNotFoundException {
-		FileOutputStream fos = new FileOutputStream(createFile(APP_PATH, type, ctx));
-		DataOutputStream out = new DataOutputStream(fos);
-		out.writeBytes(text);
-		out.close();
-		return getFileName(type);
-	}
+	/**************************************
+	 ************* Validations ************
+	 **************************************/
 
-	public static String getFileName(String type) {
-		if (type.equals("cam"))
-			return type + "_" + getDate() + ".jpg";
-		else
-			return type + "_" + getDate() + ".xml";
-	}
+	/**
+	 * Validate hex with regular expression
+	 * 
+	 * @param email
+	 *            email for validation
+	 * @return true valid hex, false invalid hex
+	 */
+	public static boolean validateEmail(final String email) {
+		Pattern pattern;
+		Matcher matcher;
 
-	public static String getDate() {
-		return DateTime.now(TimeZone.getDefault()).format("DD-MM-YY-hh-mm-ss").toString();
-	}
+		String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+				+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
+		pattern = Pattern.compile(EMAIL_PATTERN);
+		matcher = pattern.matcher(email);
+		return matcher.matches();
+	}
 }

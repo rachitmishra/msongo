@@ -3,7 +3,6 @@ package in.ceeq.msdcs.fragment;
 import in.ceeq.msdcs.R;
 import in.ceeq.msdcs.activity.HomeActivity;
 import in.ceeq.msdcs.provider.SurveyContract;
-import in.ceeq.msdcs.utils.FloatLabeledEditText;
 import in.ceeq.msdcs.utils.Utils;
 
 import java.util.ArrayList;
@@ -33,18 +32,21 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 
-	private FloatLabeledEditText mNameView;
+	private EditText mNameView;
 
 	private AutoCompleteTextView mEmailView;
 
-	private FloatLabeledEditText mPasswordView;
+	private EditText mPasswordView;
 
 	private View mProgressView;
+
+	private String mName;
 
 	public static LoginFragment newInstance() {
 		return new LoginFragment();
@@ -64,15 +66,15 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		((TextView) loginView.findViewById(R.id.logo)).setTypeface(typeFace);
 		((TextView) loginView.findViewById(R.id.header)).setTypeface(typeFace);
 
-		mNameView = (FloatLabeledEditText) loginView.findViewById(R.id.name);
-		mNameView.getEditText().setTypeface(typeFace);
+		mNameView = (EditText) loginView.findViewById(R.id.name);
+		mNameView.setTypeface(typeFace);
 
 		mEmailView = (AutoCompleteTextView) loginView.findViewById(R.id.email);
 		mEmailView.setTypeface(typeFace);
 		populateAutoComplete();
 
-		mPasswordView = (FloatLabeledEditText) loginView.findViewById(R.id.password);
-		mPasswordView.getEditText().setTypeface(typeFace);
+		mPasswordView = (EditText) loginView.findViewById(R.id.password);
+		mPasswordView.setTypeface(typeFace);
 
 		mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
@@ -107,14 +109,14 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		mEmailView.setError(null);
 		mPasswordView.setError(null);
 
-		String name = mNameView.getText().toString();
+		mName = mNameView.getText().toString();
 		String email = mEmailView.getText().toString();
 		String password = mPasswordView.getText().toString();
 
 		boolean cancel = false;
 		View focusView = null;
 
-		if (!TextUtils.isEmpty(name) && !isNameValid(name)) {
+		if (!TextUtils.isEmpty(mName) && !isNameValid(mName)) {
 			mNameView.setError(getString(R.string.error_invalid_name));
 			focusView = mNameView;
 			cancel = true;
@@ -130,7 +132,7 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 			mEmailView.setError(getString(R.string.error_field_required));
 			focusView = mEmailView;
 			cancel = true;
-		} else if (!isEmailValid(email)) {
+		} else if (!Utils.validateEmail(email)) {
 			mEmailView.setError(getString(R.string.error_invalid_email));
 			focusView = mEmailView;
 			cancel = true;
@@ -144,10 +146,11 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 			mEmailView.setEnabled(false);
 			mNameView.setEnabled(false);
 			mPasswordView.setEnabled(false);
-			newUserValues.put(SurveyContract.Users.NAME, name);
+			newUserValues.put(SurveyContract.Users.NAME, mName);
 			newUserValues.put(SurveyContract.Users.EMAIL, email);
 			newUserValues.put(SurveyContract.Users.PASSWORD, password);
-			NewUserQuery.newInstance(getActivity().getContentResolver(), getActivity()).startInsert(0, null,
+			Utils.hideKeyboard(getActivity());
+			NewUserQuery.newInstance(getActivity().getContentResolver(), getActivity()).startInsert(0, mName,
 					SurveyContract.Users.CONTENT_URI, newUserValues);
 		}
 	}
@@ -177,8 +180,8 @@ public class LoginFragment extends Fragment implements LoaderCallbacks<Cursor> {
 		protected void onInsertComplete(int token, Object cookie, Uri uri) {
 			Utils.setBooleanPrefs(mContext, Utils.IS_LOGGED_IN, true);
 			Utils.setLongPrefs(mContext, Utils.CURRENT_USER_ID, ContentUris.parseId(uri));
-			Toast.makeText(mContext, "You are registered.", Toast.LENGTH_SHORT).show();
-			((HomeActivity) mContext).replaceFragment(0);
+			Toast.makeText(mContext, "Welcome ! " + (String) cookie, Toast.LENGTH_SHORT).show();
+			((HomeActivity) mContext).replaceFragment(HomeActivity.MAP_FRAGMENT);
 			((HomeActivity) mContext).toggleAppbar(true);
 		}
 	}

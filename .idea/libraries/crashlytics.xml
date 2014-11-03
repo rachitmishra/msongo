@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="crashlytics">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/projectmsdcs/libs/crashlytics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/projectmsongo/libs/crashlytics.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="pdfjet">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/projectmsdcs/libs/pdfjet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/projectmsongo/libs/pdfjet.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

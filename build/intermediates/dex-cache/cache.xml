@@ -2,67 +2,67 @@
 <items version="2" >
 
     <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.3\classes.jar"
+        jar="D:\source\ProjectMsongo\projectmsongo\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.0.0"
-        sha1="930e8ad21abe9439e61d5f4da51cf01d01f18f4d">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\classes-5a2b78e6d0dcfc584f09865d6262e27ef602adac.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\libs\pdfjet.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="d7ee2b696253e3b44dad71abda381af5e859cdb4">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\pdfjet-1b7a97ef947c19487e8b32ea0315ff21955094fa.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\classes-e03e70c0901d0a5e43cde2fcb299bd7f59c17e86.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\classes-0cea545f0123ef7e71b6cb6c8d9e9403a995e4b7.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\libs\crashlytics.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\crashlytics-6ceaa4eaf465c99db9163e724e33932fe0f19866.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\libs\opencsv-3.0.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="8f5f973158e0aeada6378c685753fc0261019399">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\opencsv-3.0-987875c28267a775d71226d5fcd2e16f2d0b76bc.jar" />
-    </item>
-    <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\exploded-aar\com.github.johnpersano\supertoasts\1.3.4\classes.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="2e58dce1ec89cd4706295d355aaf920aee3d91c5">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\classes-d5d6ede542b6d37c6ce7ae3a1e6004ab7dbc422a.jar" />
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-e76a8d23cd328aa97cf993cff601accf6b7a5903.jar" />
     </item>
     <item
         jar="D:\android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.0.0"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-ceb83a3cb5463aef210bf3cdd1a70764a71f2df7.jar" />
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-ceb83a3cb5463aef210bf3cdd1a70764a71f2df7.jar" />
     </item>
     <item
-        jar="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jar="D:\source\ProjectMsongo\projectmsongo\libs\pdfjet.jar"
         jumboMode="false"
         revision="21.0.0"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="D:\AndroidstudioProjects\ProjectMsdcs\projectmsdcs\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-94b6b21c8ef2bf8ded49a21ff9eab4759aab3136.jar" />
+        sha1="d7ee2b696253e3b44dad71abda381af5e859cdb4">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\pdfjet-19bae327f721ad95f284210f0a04ad739e211c1a.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\classes-c401fac9d18e9526aa3bb73e037ae515e79998bf.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\libs\crashlytics.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\crashlytics-bf24f303a966720f431780dbb12fc909ec8cae6d.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\build\intermediates\exploded-aar\com.github.johnpersano\supertoasts\1.3.4\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="2e58dce1ec89cd4706295d355aaf920aee3d91c5">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\classes-4c74b0f4012cb1777b11ce4c65018b14bfe4055f.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\classes-f65d77d2cc20430de0aae0b3140d7d3e50a37b27.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.3\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="930e8ad21abe9439e61d5f4da51cf01d01f18f4d">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\classes-418e4766fec869c4f99df6f0705f49040ccb1e4e.jar" />
+    </item>
+    <item
+        jar="D:\source\ProjectMsongo\projectmsongo\libs\opencsv-3.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="8f5f973158e0aeada6378c685753fc0261019399">
+        <dex dex="D:\source\ProjectMsongo\projectmsongo\build\intermediates\pre-dexed\debug\opencsv-3.0-d7e1bbc0bf4790428965474d4bd2aabcf2f370ac.jar" />
     </item>
 
 </items>

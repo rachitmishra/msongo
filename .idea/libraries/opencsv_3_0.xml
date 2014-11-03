@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="opencsv-3.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/projectmsdcs/libs/opencsv-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/projectmsongo/libs/opencsv-3.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

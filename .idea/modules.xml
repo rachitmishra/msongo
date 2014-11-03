@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProjectMsdcs.iml" filepath="$PROJECT_DIR$/ProjectMsdcs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/projectmsdcs/projectmsdcs.iml" filepath="$PROJECT_DIR$/projectmsdcs/projectmsdcs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectMsongo.iml" filepath="$PROJECT_DIR$/ProjectMsongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projectmsongo/projectmsongo.iml" filepath="$PROJECT_DIR$/projectmsongo/projectmsongo.iml" />
     </modules>
   </component>
 </project>

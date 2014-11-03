@@ -1,0 +1,19 @@
+<resources>
+	<color name="transparent">#00000000</color>
+	<!-- card colors -->
+	<color name="card_background">#ffffff</color>
+	<color name="card_shadow_1">#d4d4d4</color>
+	<color name="card_shadow_2">#dddddd</color>
+	<color name="card_detailing">#eee</color>
+	<color name="green">#2ecc71</color>
+	<color name="red">#e74c3c</color>
+	<color name="blue">#3498db</color>
+	<color name="light_black">#808080</color>
+	<color name="timeline_background">#e5e5e5</color>
+	<color name="light_background">#f0f0f0</color>
+     <color name="msongo_color">#6ac639</color>
+    <color name="text_medium">#454545</color>
+    <color name="text_google_sheet">#0f9d58</color>
+    <color name="text_microsoft_excel">#1abc9c</color>
+    <color name="text_adobe_pdf">#e74c3c</color>
+</resources>

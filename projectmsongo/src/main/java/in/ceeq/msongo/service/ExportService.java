@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.github.johnpersano.supertoasts.SuperToast;
 
 import in.ceeq.msongo.fragment.ExportFragment;
@@ -43,7 +44,14 @@ public class ExportService extends IntentService {
 
         // Call export method to export data
 
-        Utils.export(mExportType, this, mFileName, exportDataCursor);
+        try {
+            if(exportDataCursor!=null && exportDataCursor.getCount()>0) {
+                Utils.export(mExportType, this, mFileName, exportDataCursor);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Crashlytics.logException(e);
+        }
 
         // And again little show off.
         SuperToast.create(this, "Data export complete.", Toast.LENGTH_LONG).show();

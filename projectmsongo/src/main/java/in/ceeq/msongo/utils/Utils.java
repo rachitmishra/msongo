@@ -159,7 +159,6 @@ public class Utils {
 
 			tableData.add(headerRow);
 
-			data.moveToFirst();
             int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
             int projectNameIndex = data.getColumnIndex(Details.NAME_OF_PROJECT);
             int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
@@ -234,7 +233,6 @@ public class Utils {
 	}
 
 	private static void exportCsv(Context context, String fileName, Cursor data) {
-		data.moveToFirst();
         int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
         int projectNameIndex = data.getColumnIndex(Details.NAME_OF_PROJECT);
         int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
@@ -279,7 +277,6 @@ public class Utils {
 	}
 
 	private static void exportText(Context context, String fileName, Cursor data) {
-		data.moveToFirst();
 		int idIndex = data.getColumnIndex(SurveyContract.Details._ID);
         int projectNameIndex = data.getColumnIndex(Details.NAME_OF_PROJECT);
         int dateSurveyIndex = data.getColumnIndex(SurveyContract.Details.DATE_SURVEY);
